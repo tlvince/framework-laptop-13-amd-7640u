@@ -48,6 +48,7 @@ Test environment
 - ambient light sensor disabled (`iio-sensor-proxy`)
 - Firmware: 03.03
 - GNOME with 150% scaling
+- 4x USB-C expansion cards
 
 ```sh
 powerstat -d 0 -c -H 1 480
