@@ -94,14 +94,14 @@ One `foot` terminal running `powerstat`
 - 6.6.0 #1-NixOS
 - GNOME 44.5
 
-| State                                                 | C3%     | Power (W) |
-| ----------------------                                | ------- | --------- |
-| idle (kernel: no TLP/ppd)                             | 85.867% | 10.25     |
-| idle (ppd balanced)                                   | 86.230% | 10.36     |
-| idle (ppd power saver)                                | 85.531% | 10.50     |
-| idle (TLP defaults)                                   | 86.122% | 10.20     |
-| idle (TLP power saver)                                | 84.004% | 8.59      |
-| idle (TLP power saver, balanced platform profile)     | 84.842% | 8.13      |
+| State                                                  | C3%     | Power (W) |
+| ----------------------                                 | ------- | --------- |
+| video (kernel: no TLP/ppd)                             | 85.867% | 10.25     |
+| video (ppd balanced)                                   | 86.230% | 10.36     |
+| video (ppd power saver)                                | 85.531% | 10.50     |
+| video (TLP defaults)                                   | 86.122% | 10.20     |
+| video (TLP power saver)                                | 84.004% | 8.59      |
+| video (TLP power saver, balanced platform profile)     | 84.842% | 8.13      |
 
 ## Links
 
