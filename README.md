@@ -33,46 +33,75 @@ Everything works of the box as of Linux v6.5 with firmware version 03.03.
 ## Sleep
 
 - S3 sleep unsupported
-  - S0ix supported, reaches S0i2.0
 - consumed ~4.7% battery in ~12 hours
 
-## Near-idle benchmarks
+## Battery
 
-Testing near-idle performance via two open foot terminals, one running `powerstat` with the following flags:
+Test environment
 
-```sh
-powerstat -d 0 -c -H 1 480
-```
-
-... the other running a bash one-liner:
-
-```sh
-while [ 1 ]; echo 'foo'; do sleep 1; done
-```
-
-Test environment:
-
-- Wayland only (XWayland disabled)
 - 40% brightness (~200 nits)
 - WiFi connected
 - Bluetooth disabled
 - webcam and microphone disabled (via hardware switches)
 - keyboard backlight disabled
 - power button LED lowest brightness
+- ambient light sensor disabled (`iio-sensor-proxy`)
+- Firmware: 03.03
+- GNOME with 150% scaling
 
-### GNOME
+```sh
+powerstat -d 0 -c -H 1 480
+```
+
+### Idle benchmarks
+
+One `foot` terminal running `powerstat`
+
+#### 2023-11-07
 
 - Linux 6.5.9-arch2-1
 - GNOME 45.1
-- `gnome-shell --no-x11`
-- `gdm3`
-- `gnome-settings-daemon`
+  - `gnome-shell --no-x11` (XWayland disabled)
+  - `gdm3`
+  - `gnome-settings-daemon`
 
-| State                  | C3%     | Power (W) |
-| ---------------------- | ------- | --------- |
-| idle (no TLP/ppd)      | 92.268% | 3.92      |
-| idle (ppd balanced)    | 85.5%   | 3.86      |
-| idle (ppd power saver) | 86.521% | 3.67      |
+| State                      | C3%     | Power (W) |
+| ----------------------     | ------- | --------- |
+| idle (kernel: no TLP/ppd)  | 92.268% | 3.92      |
+| idle (ppd balanced)        | 85.5%   | 3.86      |
+| idle (ppd power saver)     | 86.521% | 3.67      |
+
+#### 2023-11-12
+
+- 6.6.0 #1-NixOS
+- GNOME 44.5
+
+| State                      | C3%     | Power (W) |
+| ----------------------     | ------- | --------- |
+| idle (kernel: no TLP/ppd)  | 99.586% | 4.27      |
+| idle (ppd balanced)        | 98.32%  | 4.43      |
+| idle (TLP defaults)        | 97.899% | 3.93      |
+| idle (TLP power saver)     | 98.256% | 3.89      |
+
+### Video benchmarks
+
+- One `foot` terminal running `powerstat`
+- Firefox (in Wayland mode with hardware-video acceleration) playing 1080p vp9 YouTube video
+- both windows evenly split (horizontally)
+
+#### 2023-11-12
+
+- 6.6.0 #1-NixOS
+- GNOME 44.5
+
+| State                                                 | C3%     | Power (W) |
+| ----------------------                                | ------- | --------- |
+| idle (kernel: no TLP/ppd)                             | 85.867% | 10.25     |
+| idle (ppd balanced)                                   | 86.230% | 10.36     |
+| idle (ppd power saver)                                | 85.531% | 10.50     |
+| idle (TLP defaults)                                   | 86.122% | 10.20     |
+| idle (TLP power saver)                                | 84.004% | 8.59      |
+| idle (TLP power saver, balanced platform profile)     | 84.842% | 8.13      |
 
 ## Links
 
