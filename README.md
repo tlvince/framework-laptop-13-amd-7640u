@@ -87,7 +87,7 @@ One `foot` terminal running `powerstat`
 
 - One `foot` terminal running `powerstat`
 - Firefox (in Wayland mode with hardware-video acceleration) playing 1080p vp9 YouTube video
-- both windows evenly split (horizontally)
+- both windows evenly split (vertically)
 
 #### 2023-11-12
 
