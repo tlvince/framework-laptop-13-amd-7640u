@@ -126,4 +126,5 @@ Addtionally, for Energy Performance Preference (EPP) to work the `powersave` gov
 
 ## Links
 
+- [tlvince/nixos-config](https://github.com/tlvince/nixos-config)
 - [lhl/linuxlaptops - Framework Laptop](https://github.com/lhl/linuxlaptops/wiki/2022-Framework-Laptop-DIY-Edition-12th-Gen-Intel-Batch-1)
