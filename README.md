@@ -104,6 +104,26 @@ One `foot` terminal running `powerstat`
 | video (TLP power saver)                                | 84.004% | 8.59      |
 | video (TLP power saver, balanced platform profile)     | 84.842% | 8.13      |
 
+## Kernel defaults
+
+- CPU: `/sys/devices/system/cpu/cpu*/cpufreq/*`
+- Platform: `/sys/firmware/acpi/platform_profile`
+
+[ppd](https://gitlab.freedesktop.org/hadess/power-profiles-daemon/-/blob/1b18784f12e863b9c2aae5c0ff6aa08379cb896e/README.md#operations-on-amd-based-machines) (unmaintained) only sets `platform_power` and does not change the EPP, see [Sacaling governor and EPP is not set if amd_pstate=active is activated](https://gitlab.freedesktop.org/hadess/power-profiles-daemon/-/issues/124).
+
+Addtionally, for Energy Performance Preference (EPP) to work the `powersave` governer must be used:
+
+> If the AMD P-State scaling driver is used in `active` mode, the P-State scaling governor will be changed to `powersave` as it is the only P-State scaling governor that allows for the "Energy vs Performance Hints" to be taken into consideration.
+
+### v6.6.0
+
+| Param                           | Value
+| -----                           | -----
+| `scaling_governer`              | `performance`
+| `scaling_driver`                | `amd-pstate-epp` (active)
+| `energy_performance_preference` | `performance`
+| `platform_profile`              | `balanced`
+
 ## Links
 
 - [lhl/linuxlaptops - Framework Laptop](https://github.com/lhl/linuxlaptops/wiki/2022-Framework-Laptop-DIY-Edition-12th-Gen-Intel-Batch-1)
