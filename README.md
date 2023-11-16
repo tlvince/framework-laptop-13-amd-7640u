@@ -8,9 +8,10 @@ Everything works of the box as of Linux v6.5 with firmware version 03.03.
 
 - [AMD Ryzen 7640U](https://www.amd.com/en/product/13196) (Phoenix, Zen 4)
 - [SK hynix Platinum P41](https://ssd.skhynix.com/platinum_p41/) 1TB SSD
-- [Crucial CT2K16G56C46S5 32GB DDR5-5600 SODIMM](https://uk.crucial.com/memory/DDR5/CT2K16G56C46S5)
+- [Crucial CT2K16G56C46S5](https://uk.crucial.com/memory/DDR5/CT2K16G56C46S5) 32GB DDR5-5600 SODIMM
 - [Matte display](https://frame.work/gb/en/products/display-kit?v=FRANGX0001) 13.5", 3:2, 2256x1504, 204 ppi, 400 nits
 - 55Wh battery
+- RZ616 WiFi adapter
 - 4x [USB-C Expansion Cards](https://frame.work/gb/en/products/usb-c-expansion-card)
 
 ## Opinion
@@ -45,7 +46,7 @@ Test environment
 - webcam and microphone disabled (via hardware switches)
 - keyboard backlight disabled
 - power button LED lowest brightness
-- ambient light sensor disabled (`iio-sensor-proxy`)
+- ambient light sensor disabled (`hid_sensor_hub`)
 - Firmware: 03.03
 - GNOME with 150% scaling
 - 4x USB-C expansion cards
@@ -89,6 +90,7 @@ One `foot` terminal running `powerstat`
 - One `foot` terminal running `powerstat`
 - Firefox (in Wayland mode with hardware-video acceleration) playing 1080p vp9 YouTube video
 - both windows evenly split (vertically)
+- other baseline settings [as above](#battery)
 
 #### 2023-11-12
 
@@ -103,6 +105,43 @@ One `foot` terminal running `powerstat`
 | video (TLP defaults)                                   | 86.122% | 10.20     |
 | video (TLP power saver)                                | 84.004% | 8.59      |
 | video (TLP power saver, balanced platform profile)     | 84.842% | 8.13      |
+
+### Browsing benchmarks
+
+- One `foot` terminal running `powertop`
+- Firefox, light websites (no videos)
+- both windows evenly split (vertically)
+- `brightnessctl set 0%`
+- TLP power saver ([config](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-balanced-platform-profile-config.txt))
+- other baseline settings [as above](#battery)
+
+#### 2023-11-16
+
+- 6.6.1 #1-NixOS
+- GNOME 44.5
+- RZ616 WiFi adapter: 1.84-2.19W
+
+| State                   | Power (W) |
+| ---------               | --------- |
+| browsing, WiFi disabled | 4-5       |
+| browsing, WiFi enabled  | 5-6       |
+
+### Device benchmarks
+
+- One `foot` terminal running `powertop`
+- TLP power saver ([config](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-balanced-platform-profile-config.txt))
+- other baseline settings [as above](#battery)
+
+#### 2023-11-16
+
+- 6.6.1 #1-NixOS
+
+| Device  | State                     | Power (W) |
+| ------- | ---------                 | --------- |
+| Display | 0% brightness             | 3.14      |
+| Display | 40% brightness            | 3.52      |
+| RZ616   | Idle (0.0 pkts/s)         | 1.67      |
+| RZ616   | Speed test (16557 pkts/s) | 9.16      |
 
 ## Kernel defaults
 
