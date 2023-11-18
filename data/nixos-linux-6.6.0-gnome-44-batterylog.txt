@@ -1,0 +1,4 @@
+Slept for 3.60 hours
+Used 1.54 Wh, an average rate of 0.43 W
+At 0.43/Wh drain you battery would be empty in 72.05 hours
+For your 54.12 Wh battery this is 0.79%/hr or 18.96%/day
