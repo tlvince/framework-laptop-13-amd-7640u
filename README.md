@@ -19,6 +19,15 @@ Everything works of the box as of Linux v6.5 with firmware version 03.03.
 - [Notebookcheck review](https://www.notebookcheck.net/Framework-Laptop-13-5-Ryzen-7-7840U-review-So-much-better-than-the-Intel-version.756613.0.html)
 - 204 ppi display - [not ideal for HiDPI](https://github.com/cassidyjames/dippi/blob/1f5c8a7c80b0a81fc9e9313496dd72530a599dda/dpi.md#dpi-calculationsranges), needs 1.5x fractional scaling
 
+## Bugs
+
+- [x] System freezes: update to [BIOS version 03.03](https://knowledgebase.frame.work/en_us/framework-laptop-bios-and-driver-releases-amd-ryzen-7040-series-r1rXGVL16)
+- [x] Fingerprint reader fails to register: update [fingerprint reader firmware](https://knowledgebase.frame.work/en_us/updating-fingerprint-reader-firmware-on-linux-for-13th-gen-and-amd-ryzen-7040-series-laptops-HJrvxv_za)
+- [x] Graphical glitches: [increase iGPU RAM](https://knowledgebase.frame.work/en_us/allocate-additional-ram-to-igpu-framework-laptop-13-amd-ryzen-7040-series-BkpPUPQa)
+- [x] WiFi limited to 802.11n (WiFi 4) and 2.4GHz: configure the [regulatory domain](https://wiki.archlinux.org/index.php?title=Network_configuration/Wireless&oldid=791904#Respecting_the_regulatory_domain)
+- [ ] `ectool` [unsupported](https://community.frame.work/t/what-ec-is-used/38574/2): pending [kernel patches](https://lore.kernel.org/chrome-platform/20231005160701.19987-1-dustin@howett.net/)
+- [ ] system wakes if AC is connected during sleep: [workaround via udev rules](https://community.frame.work/t/tracking-framework-amd-ryzen-7040-series-lid-wakeup-behavior-feedback/39128/45)
+
 ## BIOS
 
 - GUI-based UEFI
@@ -167,3 +176,4 @@ Addtionally, for Energy Performance Preference (EPP) to work the `powersave` gov
 
 - [tlvince/nixos-config](https://github.com/tlvince/nixos-config)
 - [lhl/linuxlaptops - Framework Laptop](https://github.com/lhl/linuxlaptops/wiki/2022-Framework-Laptop-DIY-Edition-12th-Gen-Intel-Batch-1)
+- [A Developer's Experience: Framework 13 AMD 7040 Series](https://zach.codes/p/a-developers-review-framework-13)
