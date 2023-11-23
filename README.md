@@ -11,7 +11,7 @@ Everything works of the box as of Linux v6.5 with firmware version 03.03.
 - [Crucial CT2K16G56C46S5](https://uk.crucial.com/memory/DDR5/CT2K16G56C46S5) 32GB DDR5-5600 SODIMM
 - [Matte display](https://frame.work/gb/en/products/display-kit?v=FRANGX0001) 13.5", 3:2, 2256x1504, 204 ppi, 400 nits
 - 55Wh battery
-- RZ616 WiFi adapter
+- RZ616/MT7922 WiFi adapter
 - 4x [USB-C Expansion Cards](https://frame.work/gb/en/products/usb-c-expansion-card)
 
 ## Opinion
@@ -25,8 +25,9 @@ Everything works of the box as of Linux v6.5 with firmware version 03.03.
 - [x] Fingerprint reader fails to register: update [fingerprint reader firmware](https://knowledgebase.frame.work/en_us/updating-fingerprint-reader-firmware-on-linux-for-13th-gen-and-amd-ryzen-7040-series-laptops-HJrvxv_za)
 - [x] Graphical glitches: [increase iGPU RAM](https://knowledgebase.frame.work/en_us/allocate-additional-ram-to-igpu-framework-laptop-13-amd-ryzen-7040-series-BkpPUPQa)
 - [x] WiFi limited to 802.11n (WiFi 4) and 2.4GHz: configure the [regulatory domain](https://wiki.archlinux.org/index.php?title=Network_configuration/Wireless&oldid=791904#Respecting_the_regulatory_domain)
-- [ ] `ectool` [unsupported](https://community.frame.work/t/what-ec-is-used/38574/2): pending [kernel patches](https://lore.kernel.org/chrome-platform/20231005160701.19987-1-dustin@howett.net/)
+- [ ] `ectool` [unsupported](https://community.frame.work/t/what-ec-is-used/38574/2): pending [kernel patches](https://lore.kernel.org/chrome-platform/20231005160701.19987-1-dustin@howett.net/), [workaround via fork](https://community.frame.work/t/exploring-the-embedded-controller/12846/122)
 - [ ] system wakes if AC is connected during sleep: [workaround via udev rules](https://community.frame.work/t/tracking-framework-amd-ryzen-7040-series-lid-wakeup-behavior-feedback/39128/45)
+- [ ] Bluetooth LE Audio unsupported by MT7922: see [MediaTek MT7922 controller crashes after LE Setup Isochronous Data Path](https://lore.kernel.org/linux-bluetooth/38cb99f2b63dc55763e9e2c8ae4d4cb14afc6770.camel@tlvince.com/)
 
 ## BIOS
 
