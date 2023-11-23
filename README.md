@@ -150,8 +150,10 @@ One `foot` terminal running `powerstat`
 | ------- | ---------                 | --------- |
 | Display | 0% brightness             | 3.14      |
 | Display | 40% brightness            | 3.52      |
-| RZ616   | Idle (0.0 pkts/s)         | 1.67      |
-| RZ616   | Speed test (16557 pkts/s) | 9.16      |
+| MT7922  | Idle (0.0 pkts/s)         | 1.67      |
+| MT7922  | YouTube 4K (3461 pkt/s)   | 4.05      |
+| MT7922  | YouTube 4K (4690 pkt/s)   | 4.98      |
+| MT7922  | Speed test (16557 pkts/s) | 9.16      |
 
 ## Kernel defaults
 
