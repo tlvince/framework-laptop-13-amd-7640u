@@ -77,23 +77,23 @@ One `foot` terminal running `powerstat`
   - `gdm3`
   - `gnome-settings-daemon`
 
-| State                      | C3%     | Power (W) |
-| ----------------------     | ------- | --------- |
-| idle (kernel: no TLP/ppd)  | 92.268% | 3.92      |
-| idle (ppd balanced)        | 85.5%   | 3.86      |
-| idle (ppd power saver)     | 86.521% | 3.67      |
+| State                     | C3%     | Power (W) |
+| ------------------------- | ------- | --------- |
+| idle (kernel: no TLP/ppd) | 92.268% | 3.92      |
+| idle (ppd balanced)       | 85.5%   | 3.86      |
+| idle (ppd power saver)    | 86.521% | 3.67      |
 
 #### 2023-11-12
 
 - 6.6.0 #1-NixOS
 - GNOME 44.5
 
-| State                      | C3%     | Power (W) |
-| ----------------------     | ------- | --------- |
-| idle (kernel: no TLP/ppd)  | 99.586% | 4.27      |
-| idle (ppd balanced)        | 98.32%  | 4.43      |
-| idle (TLP defaults)        | 97.899% | 3.93      |
-| idle (TLP power saver)     | 98.256% | 3.89      |
+| State                     | C3%     | Power (W) |
+| ------------------------- | ------- | --------- |
+| idle (kernel: no TLP/ppd) | 99.586% | 4.27      |
+| idle (ppd balanced)       | 98.32%  | 4.43      |
+| idle (TLP defaults)       | 97.899% | 3.93      |
+| idle (TLP power saver)    | 98.256% | 3.89      |
 
 ### 2023-11-30
 
@@ -101,9 +101,9 @@ One `foot` terminal running `powerstat`
 - GNOME 45.1
 - `amdgpu.abmlevel=3`
 
-| State                                              | C3%     | Power (W) |
-| ----------------------                             | ------- | --------- |
-| idle (TLP power saver, balanced platform profile)  | 99.451% | 3.10      |
+| State                                             | C3%     | Power (W) |
+| ------------------------------------------------- | ------- | --------- |
+| idle (TLP power saver, balanced platform profile) | 99.451% | 3.10      |
 
 ### Video benchmarks
 
@@ -117,14 +117,14 @@ One `foot` terminal running `powerstat`
 - 6.6.0 #1-NixOS
 - GNOME 44.5
 
-| State                                                  | C3%     | Power (W) |
-| ----------------------                                 | ------- | --------- |
-| video (kernel: no TLP/ppd)                             | 85.867% | 10.25     |
-| video (ppd balanced)                                   | 86.230% | 10.36     |
-| video (ppd power saver)                                | 85.531% | 10.50     |
-| video (TLP defaults)                                   | 86.122% | 10.20     |
-| video (TLP power saver)                                | 84.004% | 8.59      |
-| video (TLP power saver, balanced platform profile)     | 84.842% | 8.13      |
+| State                                              | C3%     | Power (W) |
+| -------------------------------------------------- | ------- | --------- |
+| video (kernel: no TLP/ppd)                         | 85.867% | 10.25     |
+| video (ppd balanced)                               | 86.230% | 10.36     |
+| video (ppd power saver)                            | 85.531% | 10.50     |
+| video (TLP defaults)                               | 86.122% | 10.20     |
+| video (TLP power saver)                            | 84.004% | 8.59      |
+| video (TLP power saver, balanced platform profile) | 84.842% | 8.13      |
 
 ### 2023-11-30
 
@@ -132,9 +132,9 @@ One `foot` terminal running `powerstat`
 - GNOME 45.1
 - `amdgpu.abmlevel=3`
 
-| State                                                  | C3%     | Power (W) |
-| ----------------------                                 | ------- | --------- |
-| video (TLP power saver, balanced platform profile)     | 83.483% | 7.99      |
+| State                                              | C3%     | Power (W) |
+| -------------------------------------------------- | ------- | --------- |
+| video (TLP power saver, balanced platform profile) | 83.483% | 7.99      |
 
 ### Browsing benchmarks
 
@@ -152,7 +152,7 @@ One `foot` terminal running `powerstat`
 - RZ616 WiFi adapter: 1.84-2.19W
 
 | State                   | Power (W) |
-| ---------               | --------- |
+| ----------------------- | --------- |
 | browsing, WiFi disabled | 4-5       |
 | browsing, WiFi enabled  | 5-6       |
 
@@ -167,7 +167,7 @@ One `foot` terminal running `powerstat`
 - 6.6.1 #1-NixOS
 
 | Device  | State                     | Power (W) |
-| ------- | ---------                 | --------- |
+| ------- | ------------------------- | --------- |
 | Display | 0% brightness             | 3.14      |
 | Display | 40% brightness            | 3.52      |
 | MT7922  | Idle (0.0 pkts/s)         | 1.67      |
@@ -179,13 +179,13 @@ One `foot` terminal running `powerstat`
 
 - 6.6.2 #1-NixOS
 
-| Device  | State                     | Power (W) |
-| ------- | ---------                 | --------- |
-| Display | 40% brightness            | 3.52      |
-| AX210   | Idle (0.0 pkts/s)         | 1.55      |
-| AX210   | YouTube 4K (3601 pkts/s)  | 5.06      |
-| AX210   | Download (10400 pkt/s)    | 6.40      |
-| AX210   | Speed test (13539 pkt/s)  | 7.14      |
+| Device  | State                    | Power (W) |
+| ------- | ------------------------ | --------- |
+| Display | 40% brightness           | 3.52      |
+| AX210   | Idle (0.0 pkts/s)        | 1.55      |
+| AX210   | YouTube 4K (3601 pkts/s) | 5.06      |
+| AX210   | Download (10400 pkt/s)   | 6.40      |
+| AX210   | Speed test (13539 pkt/s) | 7.14      |
 
 ## Kernel defaults
 
@@ -200,12 +200,12 @@ Addtionally, for Energy Performance Preference (EPP) to work the `powersave` gov
 
 ### v6.6.0
 
-| Param                           | Value
-| -----                           | -----
-| `scaling_governer`              | `performance`
-| `scaling_driver`                | `amd-pstate-epp` (active)
-| `energy_performance_preference` | `performance`
-| `platform_profile`              | `balanced`
+| Param                           | Value                     |
+| ------------------------------- | ------------------------- |
+| `scaling_governer`              | `performance`             |
+| `scaling_driver`                | `amd-pstate-epp` (active) |
+| `energy_performance_preference` | `performance`             |
+| `platform_profile`              | `balanced`                |
 
 ## Links
 
