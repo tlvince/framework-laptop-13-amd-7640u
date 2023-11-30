@@ -95,6 +95,16 @@ One `foot` terminal running `powerstat`
 | idle (TLP defaults)        | 97.899% | 3.93      |
 | idle (TLP power saver)     | 98.256% | 3.89      |
 
+### 2023-11-30
+
+- 6.6.2 #1-NixOS
+- GNOME 45.1
+- `amdgpu.abmlevel=3`
+
+| State                                              | C3%     | Power (W) |
+| ----------------------                             | ------- | --------- |
+| idle (TLP power saver, balanced platform profile)  | 99.451% | 3.10      |
+
 ### Video benchmarks
 
 - One `foot` terminal running `powerstat`
@@ -115,6 +125,16 @@ One `foot` terminal running `powerstat`
 | video (TLP defaults)                                   | 86.122% | 10.20     |
 | video (TLP power saver)                                | 84.004% | 8.59      |
 | video (TLP power saver, balanced platform profile)     | 84.842% | 8.13      |
+
+### 2023-11-30
+
+- 6.6.2 #1-NixOS
+- GNOME 45.1
+- `amdgpu.abmlevel=3`
+
+| State                                                  | C3%     | Power (W) |
+| ----------------------                                 | ------- | --------- |
+| video (TLP power saver, balanced platform profile)     | 83.483% | 7.99      |
 
 ### Browsing benchmarks
 
@@ -154,6 +174,18 @@ One `foot` terminal running `powerstat`
 | MT7922  | YouTube 4K (3461 pkt/s)   | 4.05      |
 | MT7922  | YouTube 4K (4690 pkt/s)   | 4.98      |
 | MT7922  | Speed test (16557 pkts/s) | 9.16      |
+
+#### 2023-11-25
+
+- 6.6.2 #1-NixOS
+
+| Device  | State                     | Power (W) |
+| ------- | ---------                 | --------- |
+| Display | 40% brightness            | 3.52      |
+| AX210   | Idle (0.0 pkts/s)         | 1.55      |
+| AX210   | YouTube 4K (3601 pkts/s)  | 5.06      |
+| AX210   | Download (10400 pkt/s)    | 6.40      |
+| AX210   | Speed test (13539 pkt/s)  | 7.14      |
 
 ## Kernel defaults
 
