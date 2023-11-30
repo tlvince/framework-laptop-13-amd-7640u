@@ -95,7 +95,7 @@ One `foot` terminal running `powerstat`
 | idle (TLP defaults)       | 97.899% | 3.93      |
 | idle (TLP power saver)    | 98.256% | 3.89      |
 
-### 2023-11-30
+#### 2023-11-30
 
 - 6.6.2 #1-NixOS
 - GNOME 45.1
@@ -126,7 +126,7 @@ One `foot` terminal running `powerstat`
 | video (TLP power saver)                            | 84.004% | 8.59      |
 | video (TLP power saver, balanced platform profile) | 84.842% | 8.13      |
 
-### 2023-11-30
+#### 2023-11-30
 
 - 6.6.2 #1-NixOS
 - GNOME 45.1
