@@ -33,7 +33,8 @@ Everything works of the box as of Linux v6.5 with firmware version 03.03.
 - [ ] [Systemd suspend-then-hibernate wakes up after 5 minutes](https://community.frame.work/t/resolved-systemd-suspend-then-hibernate-wakes-up-after-5-minutes/39392): pending [kernel patch](https://lore.kernel.org/linux-kernel/20231106162310.85711-1-mario.limonciello@amd.com/), workaround: `rtc_cmos.use_acpi_alarm=1`
 - [ ] power-profiles-daemon does not set EPP: pending [patch](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/merge_requests/123), workaround: use TLP
 - [ ] HDMI and DisplayPort expansion cards do not autosuspend: pending [systemd patch](https://github.com/systemd/systemd/pull/30131)
-- [ ] [ambient light sensor fails to init on Linux 6.7-rc3](https://community.frame.work/t/tracking-linux-battery-life-tuning/6665/517)
+- [ ] [ambient light sensor fails to init on Linux 6.7-rc3](https://bugzilla.kernel.org/show_bug.cgi?id=218223)
+- [ ] [high power use when decoding H264 & vp09 with vaapi (software decoding is more efficient)](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10223)
 
 ## Enhancements
 
