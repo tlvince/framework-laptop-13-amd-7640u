@@ -35,6 +35,7 @@ Everything works of the box as of Linux v6.5 with firmware version 03.03.
 - [ ] HDMI and DisplayPort expansion cards do not autosuspend: pending [systemd patch](https://github.com/systemd/systemd/pull/30131)
 - [ ] [ambient light sensor fails to init on Linux 6.7-rc3](https://bugzilla.kernel.org/show_bug.cgi?id=218223)
 - [ ] [high power use when decoding H264 & vp09 with vaapi (software decoding is more efficient)](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10223)
+- [ ] [Headset microphone not selectable as an input source](https://community.frame.work/t/resolved-headset-mic-on-amd-fw13-running-fedora-39/38847): pending [kernel patch](https://lore.kernel.org/alsa-devel/87h6kvwgfq.wl-tiwai@suse.de/T/#mdfbd5f9fb7901e4ea870821bc828f71c884108ae), [workaround via kernel params](https://github.com/NixOS/nixos-hardware/blob/fa194fc484fd7270ab324bb985593f71102e84d1/framework/13-inch/common/default.nix#L7-L13)
 
 ## Enhancements
 
