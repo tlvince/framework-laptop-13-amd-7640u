@@ -90,6 +90,7 @@ One `foot` terminal running `powerstat`
   - `gnome-shell --no-x11` (XWayland disabled)
   - `gdm3`
   - `gnome-settings-daemon`
+- MT7922
 
 | State                     | C3%     | Power (W) |
 | ------------------------- | ------- | --------- |
@@ -101,6 +102,7 @@ One `foot` terminal running `powerstat`
 
 - 6.6.0 #1-NixOS
 - GNOME 44.5
+- MT7922
 
 | State                     | C3%     | Power (W) |
 | ------------------------- | ------- | --------- |
@@ -114,10 +116,25 @@ One `foot` terminal running `powerstat`
 - 6.6.2 #1-NixOS
 - GNOME 45.1
 - `amdgpu.abmlevel=3`
+- MT7922
 
 | State                                             | C3%     | Power (W) |
 | ------------------------------------------------- | ------- | --------- |
 | idle (TLP power saver, balanced platform profile) | 99.451% | 3.10      |
+
+#### 2023-12-29
+
+- 6.6.8 #1-NixOS
+- GNOME 45.2
+- [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
+- AX210
+
+| State                                              | C3%     | Power (W) |
+| -------------------------------------------------- | ------- | --------- |
+| idle (ppd balanced)                                | 99.338% | 4.51      |
+| idle (ppd power saver)                             | 99.368% | 4.32      |
+| idle (TLP power saver, low power platform profile) | 99.376% | 3.84      |
+| idle (TLP power saver, balanced platform profile)  | 99.391% | 3.80      |
 
 ### Video benchmarks
 
@@ -130,6 +147,7 @@ One `foot` terminal running `powerstat`
 
 - 6.6.0 #1-NixOS
 - GNOME 44.5
+- MT7922
 
 | State                                              | C3%     | Power (W) |
 | -------------------------------------------------- | ------- | --------- |
@@ -145,10 +163,25 @@ One `foot` terminal running `powerstat`
 - 6.6.2 #1-NixOS
 - GNOME 45.1
 - `amdgpu.abmlevel=3`
+- MT7922
 
 | State                                              | C3%     | Power (W) |
 | -------------------------------------------------- | ------- | --------- |
 | video (TLP power saver, balanced platform profile) | 83.483% | 7.99      |
+
+#### 2023-12-29
+
+- 6.6.8 #1-NixOS
+- GNOME 45.2
+- [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
+- AX210
+
+| State                                              | C3%     | Power (W) |
+| -------------------------------------------------- | ------- | --------- |
+| idle (ppd balanced)                                | 84.705% | 9.35      |
+| idle (ppd power saver)                             | 83.443% | 8.82      |
+| idle (TLP power saver, low power platform profile) | 83.390% | 8.11      |
+| idle (TLP power saver, balanced platform profile)  | 84.495% | 8.26      |
 
 ### Browsing benchmarks
 
