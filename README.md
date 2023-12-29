@@ -132,6 +132,7 @@ One `foot` terminal running `powerstat`
 | State                                              | C3%     | Power (W) |
 | -------------------------------------------------- | ------- | --------- |
 | idle (ppd balanced)                                | 99.338% | 4.51      |
+| idle (ppd balanced, powertop autotune)             | 99.382% | 4.35      |
 | idle (ppd power saver)                             | 99.368% | 4.32      |
 | idle (TLP power saver, low power platform profile) | 99.376% | 3.84      |
 | idle (TLP power saver, balanced platform profile)  | 99.391% | 3.80      |
@@ -179,6 +180,7 @@ One `foot` terminal running `powerstat`
 | State                                              | C3%     | Power (W) |
 | -------------------------------------------------- | ------- | --------- |
 | idle (ppd balanced)                                | 84.705% | 9.35      |
+| idle (ppd balanced, powertop autotune)             | 84.891% | 8.83      |
 | idle (ppd power saver)                             | 83.443% | 8.82      |
 | idle (TLP power saver, low power platform profile) | 83.390% | 8.11      |
 | idle (TLP power saver, balanced platform profile)  | 84.495% | 8.26      |
