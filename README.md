@@ -2,7 +2,7 @@
 
 Device notes and configuration under Linux for the [Framework Laptop 13 AMD Ryzen 7040 Series](https://frame.work/gb/en/products/laptop-diy-13-gen-amd?tab=overview) Ryzen 5 7640U variant, DIY edition.
 
-Everything works of the box as of Linux v6.5 with firmware version 03.03.
+Everything works of the box as of Linux v6.5 (>=6.7 recommended) with firmware version 03.03.
 
 ## Specs
 
