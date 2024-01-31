@@ -53,7 +53,7 @@ Everything works of the box as of Linux v6.5 (>=6.7 recommended) with firmware v
 
 - [getUserMedia / getDisplayMedia Test Page](https://mozilla.github.io/webrtc-landing/gum_test.html) - useful for testing webcam/screensharing
 - [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration) VA-API support via `libva-mesa-driver`
-  - Firefox requires [`media.ffmpeg.vaapi.enable=true`](https://wiki.archlinux.org/title/firefox#Hardware_video_acceleration)
+  - Firefox requires [`media.ffmpeg.vaapi.enabled=true`](https://wiki.archlinux.org/title/firefox#Hardware_video_acceleration)
 
 ## Sleep
 
