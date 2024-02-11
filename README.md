@@ -41,7 +41,7 @@ Everything works of the box as of Linux v6.5 (>=6.7 recommended) with firmware v
 ## Enhancements
 
 - [ ] [AMD P-State Preferred Core](https://www.phoronix.com/news/AMD-P-State-Preferred-Core) patches
-- [x] [Adaptive Backlight Management (ABM)](https://community.frame.work/t/adaptive-backlight-management-abm/41055)
+- [ ] [Adaptive Backlight Management (ABM)](https://community.frame.work/t/adaptive-backlight-management-abm/41055): kernel param working, userspace toggle pending [kernel patch](https://lore.kernel.org/amd-gfx/0b94b25a-9ffa-41a5-b931-ad84e1892d36@amd.com/T/#m079d7c357626cf3a80cd9ba6239b3fe4fcf8937e) and [ppd patch](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/merge_requests/137)
 
 ## BIOS
 
