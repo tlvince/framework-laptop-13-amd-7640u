@@ -190,8 +190,6 @@ One `foot` terminal running `powerstat`
 - One `foot` terminal running `powertop`
 - Firefox, light websites (no videos)
 - both windows evenly split (vertically)
-- `brightnessctl set 0%`
-- TLP power saver ([config](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-balanced-platform-profile-config.txt))
 - other baseline settings [as above](#battery)
 
 #### 2023-11-16
@@ -199,11 +197,26 @@ One `foot` terminal running `powerstat`
 - 6.6.1 #1-NixOS
 - GNOME 44.5
 - RZ616 WiFi adapter: 1.84-2.19W
+- `brightnessctl set 0%`
+- TLP power saver ([config](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-balanced-platform-profile-config.txt))
 
 | State                   | Power (W) |
 | ----------------------- | --------- |
 | browsing, WiFi disabled | 4-5       |
 | browsing, WiFi enabled  | 5-6       |
+
+#### 2024-02-11
+
+- 6.7.4 #1-NixOS
+- GNOME 45.3
+- AX210
+- 40% brightness (~200 nits)
+- [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
+
+| State                  | C3%     | Power (W) |
+| ---------------------- | ------- | --------- |
+| idle (ppd power saver) | 75.899% | 5.79      |
+| idle (ppd balanced)    | 80.195% | 6.09      |
 
 ### Device benchmarks
 
