@@ -1,0 +1,819 @@
+2024-02-20 13:00:24,581 DEBUG:	Since support: 1
+2024-02-20 13:00:24,593 INFO:	Debugging script for s2idle on AMD systems
+2024-02-20 13:00:24,593 INFO:	💻 Framework Laptop 13 (AMD Ryzen 7040Series) (Laptop) running BIOS 3.3 (03.03) released 10/17/2023 and EC unknown
+2024-02-20 13:00:24,594 INFO:	🐧 Kernel 6.7.5
+2024-02-20 13:00:24,595 DEBUG:	BAT1 charge level is 2121000 µAh
+2024-02-20 13:00:24,596 INFO:	🔋 Battery BAT1 ( ) is operating at 99.02% of design
+2024-02-20 13:00:24,596 INFO:	Checking prerequisites for s2idle
+2024-02-20 13:00:24,596 WARNING:	🚦Logs are provided via dmesg, timestamps may not be accurate over multiple cycles
+2024-02-20 13:00:24,596 INFO:	✅ AMD Ryzen 5 7640U w/ Radeon 760M Graphics (family 19 model 74)
+2024-02-20 13:00:24,596 INFO:	✅ LPS0 _DSM enabled
+2024-02-20 13:00:24,597 INFO:	✅ ACPI FADT supports Low-power S0 idle
+2024-02-20 13:00:24,597 DEBUG:	/sys/module/gpiolib_acpi/parameters/ignore_wake is not configured
+2024-02-20 13:00:24,597 DEBUG:	/sys/module/gpiolib_acpi/parameters/ignore_interrupt is not configured
+2024-02-20 13:00:24,597 DEBUG:	/proc/cmdline: init=/nix/store/1222nd2x0r722fvc6p5kfl367v1jncxn-nixos-system-framework-24.05.20240218.b98a4e1/init amd_pstate=active amdgpu.sg_display=0 rtc_cmos.use_acpi_alarm=1
+2024-02-20 13:00:24,599 DEBUG:	LOGIND: configuration changes:
+2024-02-20 13:00:24,599 DEBUG:		killuserprocesses: no
+2024-02-20 13:00:24,599 DEBUG:		handlepowerkey: poweroff
+2024-02-20 13:00:24,599 DEBUG:		handlepowerkeylongpress: ignore
+2024-02-20 13:00:24,599 DEBUG:		handlerebootkey: reboot
+2024-02-20 13:00:24,599 DEBUG:		handlerebootkeylongpress: poweroff
+2024-02-20 13:00:24,599 DEBUG:		handlesuspendkey: suspend
+2024-02-20 13:00:24,599 DEBUG:		handlesuspendkeylongpress: hibernate
+2024-02-20 13:00:24,599 DEBUG:		handlehibernatekey: hibernate
+2024-02-20 13:00:24,599 DEBUG:		handlehibernatekeylongpress: ignore
+2024-02-20 13:00:24,599 DEBUG:		handlelidswitch: suspend
+2024-02-20 13:00:24,599 DEBUG:		handlelidswitchexternalpower: suspend
+2024-02-20 13:00:24,599 DEBUG:		handlelidswitchdocked: ignore
+2024-02-20 13:00:24,599 INFO:	✅ HSMP driver `amd_hsmp` not detected (blocked: False)
+2024-02-20 13:00:24,603 INFO:	✅ PMC driver `amd_pmc` loaded (Program 0 Firmware 76.70.0)
+2024-02-20 13:00:24,612 INFO:	✅ USB4 driver `thunderbolt` loaded
+2024-02-20 13:00:24,616 INFO:	✅ GPU driver `amdgpu` available
+2024-02-20 13:00:24,617 INFO:	✅ System is configured for s2idle
+2024-02-20 13:00:24,621 INFO:	✅ NVME SK hynix Platinum P41/PC801 NVMe Solid State Drive is configured for s2idle in BIOS
+2024-02-20 13:00:24,625 INFO:	✅ GPIO driver `pinctrl_amd` available
+2024-02-20 13:00:24,627 DEBUG:	Winblue GPIO 0 debounce: disabled
+2024-02-20 13:00:24,627 DEBUG:	gpio	  int|active|trigger|S0i3| S3|S4/S5| Z|wake|pull|  orient|       debounce|reg
+2024-02-20 13:00:24,628 DEBUG:	#0	   😛|     ↑|   edge|  ⏰| ⏰|     |⏰|    |  ↑ |input  ↑|b (🕑 046875us)|0x81578e3
+2024-02-20 13:00:24,628 DEBUG:	#2	   😛|     ↓|   edge|  ⏰| ⏰|     |  |    |    |input  ↑|               |0x57a00
+2024-02-20 13:00:24,628 DEBUG:	#5	   😛|     ↓|  level|    |   |     |  |    |  ↑ |input  ↑|               |0x151b00
+2024-02-20 13:00:24,628 DEBUG:	#6	   😛|     ↓|   edge|  ⏰| ⏰|     |  |    |  ↑ |input  ↑|               |0x157a00
+2024-02-20 13:00:24,628 DEBUG:	#8	   😛|     ↓|  level|    |   |     |⏰|    |  ↑ |input  ↑|               |0x8151b00
+2024-02-20 13:00:24,628 DEBUG:	#44	   😷|     ↑|   edge|    |   |     |  |    |    |input  ↓|               |0x800
+2024-02-20 13:00:24,628 DEBUG:	#52	   😷|     ↑|  level|    |   |     |  |    |    |input  ↓|               |0x900
+2024-02-20 13:00:24,628 DEBUG:	#54	   😛|     ↑|   edge|  ⏰| ⏰|     |  |    |    |input  ↓|               |0x7800
+2024-02-20 13:00:24,628 DEBUG:	#58	   😛|     ↑|  level|  ⏰| ⏰|     |⏰|    |    |input  ↓|               |0x8007900
+2024-02-20 13:00:24,628 DEBUG:	#59	   😛|     ↑|  level|  ⏰| ⏰|     |⏰|    |    |input  ↓|               |0x8007900
+2024-02-20 13:00:24,628 DEBUG:	#61	   😛|     ↑|  level|  ⏰| ⏰|     |  |    |    |input  ↓|               |0x7900
+2024-02-20 13:00:24,628 DEBUG:	#62	   😛|     ↑|  level|  ⏰| ⏰|     |  |    |    |input  ↓|               |0x7900
+2024-02-20 13:00:24,628 DEBUG:	#84	   😛|     ↓|  level|    |   |     |  |    |  ↑ |input  ↑|               |0x151b00
+2024-02-20 13:00:24,628 DEBUG:	#172	   😷|     ↑|  level|    |   |     |  |    |    |input  ↓|               |0x900
+2024-02-20 13:00:24,629 DEBUG:	Lockdown not available
+2024-02-20 13:00:24,637 DEBUG:	VCE feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,637 DEBUG:	UVD feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,637 DEBUG:	MC feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	ME feature version: 33, firmware version: 0x00000026
+2024-02-20 13:00:24,638 DEBUG:	PFP feature version: 33, firmware version: 0x0000002d
+2024-02-20 13:00:24,638 DEBUG:	CE feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	RLC feature version: 1, firmware version: 0x00000077
+2024-02-20 13:00:24,638 DEBUG:	RLC SRLC feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	RLC SRLG feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	RLC SRLS feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	RLCP feature version: 1, firmware version: 0x0000000e
+2024-02-20 13:00:24,638 DEBUG:	RLCV feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	MEC feature version: 33, firmware version: 0x00000021
+2024-02-20 13:00:24,638 DEBUG:	IMU feature version: 0, firmware version: 0x0b012c00
+2024-02-20 13:00:24,638 DEBUG:	SOS feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	ASD feature version: 553648302, firmware version: 0x210000ae
+2024-02-20 13:00:24,638 DEBUG:	TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	TA RAS feature version: 0x00000000, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	TA HDCP feature version: 0x00000000, firmware version: 0x1700003a
+2024-02-20 13:00:24,638 DEBUG:	TA DTM feature version: 0x00000000, firmware version: 0x12000015
+2024-02-20 13:00:24,638 DEBUG:	TA RAP feature version: 0x00000000, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	SMC feature version: 0, program: 0, firmware version: 0x004c4600 (76.70.0)
+2024-02-20 13:00:24,638 DEBUG:	SDMA0 feature version: 60, firmware version: 0x00000010
+2024-02-20 13:00:24,638 DEBUG:	VCN feature version: 0, firmware version: 0x0510a000
+2024-02-20 13:00:24,638 DEBUG:	DMCU feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	DMCUB feature version: 0, firmware version: 0x08003000
+2024-02-20 13:00:24,638 DEBUG:	TOC feature version: 0, firmware version: 0x0000000b
+2024-02-20 13:00:24,638 DEBUG:	MES_KIQ feature version: 6, firmware version: 0x0000006a
+2024-02-20 13:00:24,638 DEBUG:	MES feature version: 1, firmware version: 0x00000042
+2024-02-20 13:00:24,638 DEBUG:	VPE feature version: 0, firmware version: 0x00000000
+2024-02-20 13:00:24,638 DEBUG:	VBIOS version: 113-PHXGENERIC-001
+2024-02-20 13:00:24,644 DEBUG:	PCI devices
+2024-02-20 13:00:24,645 DEBUG:	| 0000:00:00.0 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14e8]
+2024-02-20 13:00:24,645 DEBUG:	| 0000:00:00.2 : Advanced Micro Devices, Inc. [AMD] IOMMU [1022:14e9]
+2024-02-20 13:00:24,645 DEBUG:	| 0000:00:01.0 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14ea]
+2024-02-20 13:00:24,645 DEBUG:	| 0000:00:02.0 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14ea]
+2024-02-20 13:00:24,645 DEBUG:	| 0000:00:02.2 : Advanced Micro Devices, Inc. [AMD] PCI bridge [1022:14ee] : \_SB_.PCI0.GPP6
+2024-02-20 13:00:24,646 DEBUG:	├─ 0000:01:00.0 : Intel Corporation Network controller [8086:2725] : \_SB_.PCI0.GPP6.WLAN
+2024-02-20 13:00:24,646 DEBUG:	| 0000:00:02.4 : Advanced Micro Devices, Inc. [AMD] PCI bridge [1022:14ee] : \_SB_.PCI0.GPP8
+2024-02-20 13:00:24,646 DEBUG:	├─ 0000:02:00.0 : SK hynix Non-Volatile memory controller [1c5c:1959] : \_SB_.PCI0.GPP8.NVME
+2024-02-20 13:00:24,646 DEBUG:	| 0000:00:03.0 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14ea]
+2024-02-20 13:00:24,646 DEBUG:	| 0000:00:03.1 : Advanced Micro Devices, Inc. [AMD] PCI bridge [1022:14ef] : \_SB_.PCI0.GP11
+2024-02-20 13:00:24,646 DEBUG:	| 0000:00:04.0 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14ea]
+2024-02-20 13:00:24,647 DEBUG:	| 0000:00:04.1 : Advanced Micro Devices, Inc. [AMD] PCI bridge [1022:14ef] : \_SB_.PCI0.GP12
+2024-02-20 13:00:24,647 DEBUG:	| 0000:00:08.0 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14ea]
+2024-02-20 13:00:24,647 DEBUG:	| 0000:00:08.1 : Advanced Micro Devices, Inc. [AMD] PCI bridge [1022:14eb] : \_SB_.PCI0.GP17
+2024-02-20 13:00:24,647 DEBUG:	├─ 0000:c1:00.0 : Advanced Micro Devices, Inc. [AMD/ATI] VGA compatible controller [1002:15bf] : \_SB_.PCI0.GP17.VGA_
+2024-02-20 13:00:24,647 DEBUG:	├─ 0000:c1:00.1 : Advanced Micro Devices, Inc. [AMD/ATI] Audio device [1002:1640] : \_SB_.PCI0.GP17.HDAU
+2024-02-20 13:00:24,647 DEBUG:	├─ 0000:c1:00.2 : Advanced Micro Devices, Inc. [AMD] Encryption controller [1022:15c7] : \_SB_.PCI0.GP17.PSP_
+2024-02-20 13:00:24,648 DEBUG:	├─ 0000:c1:00.3 : Advanced Micro Devices, Inc. [AMD] USB controller [1022:15b9] : \_SB_.PCI0.GP17.XHC0
+2024-02-20 13:00:24,648 DEBUG:	├─ 0000:c1:00.4 : Advanced Micro Devices, Inc. [AMD] USB controller [1022:15ba] : \_SB_.PCI0.GP17.XHC1
+2024-02-20 13:00:24,648 DEBUG:	├─ 0000:c1:00.5 : Advanced Micro Devices, Inc. [AMD] Multimedia controller [1022:15e2] : \_SB_.PCI0.GP17.ACP_
+2024-02-20 13:00:24,648 DEBUG:	├─ 0000:c1:00.6 : Advanced Micro Devices, Inc. [AMD] Audio device [1022:15e3] : \_SB_.PCI0.GP17.AZAL
+2024-02-20 13:00:24,648 DEBUG:	| 0000:00:08.2 : Advanced Micro Devices, Inc. [AMD] PCI bridge [1022:14eb] : \_SB_.PCI0.GP18
+2024-02-20 13:00:24,649 DEBUG:	├─ 0000:c2:00.0 : Advanced Micro Devices, Inc. [AMD]  [1022:14ec]
+2024-02-20 13:00:24,649 DEBUG:	├─ 0000:c2:00.1 : Advanced Micro Devices, Inc. [AMD] Signal processing controller [1022:1502] : \_SB_.PCI0.GP18.IPU_
+2024-02-20 13:00:24,649 DEBUG:	| 0000:00:08.3 : Advanced Micro Devices, Inc. [AMD] PCI bridge [1022:14eb] : \_SB_.PCI0.GP19
+2024-02-20 13:00:24,649 DEBUG:	├─ 0000:c3:00.0 : Advanced Micro Devices, Inc. [AMD]  [1022:14ec] : \_SB_.PCI0.GP19.XHC2
+2024-02-20 13:00:24,649 DEBUG:	├─ 0000:c3:00.3 : Advanced Micro Devices, Inc. [AMD] USB controller [1022:15c0] : \_SB_.PCI0.GP19.XHC3
+2024-02-20 13:00:24,649 DEBUG:	├─ 0000:c3:00.4 : Advanced Micro Devices, Inc. [AMD] USB controller [1022:15c1] : \_SB_.PCI0.GP19.XHC4
+2024-02-20 13:00:24,650 DEBUG:	├─ 0000:c3:00.5 : Advanced Micro Devices, Inc. [AMD] USB controller [1022:1668] : \_SB_.PCI0.GP19.NHI0
+2024-02-20 13:00:24,650 DEBUG:	├─ 0000:c3:00.6 : Advanced Micro Devices, Inc. [AMD] USB controller [1022:1669] : \_SB_.PCI0.GP19.NHI1
+2024-02-20 13:00:24,650 DEBUG:	| 0000:00:14.0 : Advanced Micro Devices, Inc. [AMD] SMBus [1022:790b] : \_SB_.PCI0.SMBS
+2024-02-20 13:00:24,650 DEBUG:	| 0000:00:14.3 : Advanced Micro Devices, Inc. [AMD] ISA bridge [1022:790e] : \_SB_.PCI0.LPC0
+2024-02-20 13:00:24,650 DEBUG:	| 0000:00:18.0 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f0]
+2024-02-20 13:00:24,650 DEBUG:	| 0000:00:18.1 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f1]
+2024-02-20 13:00:24,651 DEBUG:	| 0000:00:18.2 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f2]
+2024-02-20 13:00:24,651 DEBUG:	| 0000:00:18.3 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f3]
+2024-02-20 13:00:24,651 DEBUG:	| 0000:00:18.4 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f4]
+2024-02-20 13:00:24,651 DEBUG:	| 0000:00:18.5 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f5]
+2024-02-20 13:00:24,651 DEBUG:	| 0000:00:18.6 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f6]
+2024-02-20 13:00:24,651 DEBUG:	└─0000:00:18.7 : Advanced Micro Devices, Inc. [AMD] Host bridge [1022:14f7]
+2024-02-20 13:00:24,663 DEBUG:	I2C HID devices
+2024-02-20 13:00:24,663 DEBUG:	| "FRMW0004:00 32AC:0006 Wireless Radio Control" [FRMW0004] : \_SB_.I2CA.ECSH
+2024-02-20 13:00:24,663 DEBUG:	| "FRMW0004:00 32AC:0006 Consumer Control" [FRMW0004] : \_SB_.I2CA.ECSH
+2024-02-20 13:00:24,663 DEBUG:	| "PIXA3854:00 093A:0274 Mouse" [PIXA3854] : \_SB_.I2CD.TPAD
+2024-02-20 13:00:24,663 DEBUG:	└─"PIXA3854:00 093A:0274 Touchpad" [PIXA3854] : \_SB_.I2CD.TPAD
+2024-02-20 13:00:24,694 DEBUG:	Wakeup sources:
+2024-02-20 13:00:24,694 DEBUG:	|  [/sys/devices/platform/USBC000:00/power_supply/ucsi-source-psy-USBC000:001/wakeup57]: enabled
+2024-02-20 13:00:24,694 DEBUG:	|  [/sys/devices/platform/USBC000:00/power_supply/ucsi-source-psy-USBC000:002/wakeup58]: enabled
+2024-02-20 13:00:24,694 DEBUG:	|  [/sys/devices/platform/USBC000:00/power_supply/ucsi-source-psy-USBC000:003/wakeup59]: enabled
+2024-02-20 13:00:24,694 DEBUG:	|  [/sys/devices/platform/USBC000:00/power_supply/ucsi-source-psy-USBC000:004/wakeup60]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| ACPI Battery [PNP0C0A:00]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| ACPI Lid Switch [PNP0C0D:00]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| ACPI Power Button [PNP0C0C:00]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] ISA bridge [0000:00:14.3]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] Multimedia controller [0000:c1:00.5]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] PCI bridge [0000:00:02.2]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] PCI bridge [0000:00:03.1]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] PCI bridge [0000:00:04.1]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] USB controller [0000:c1:00.3]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] USB controller [0000:c1:00.4]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] USB controller [0000:c3:00.3]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] USB controller [0000:c3:00.4]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] USB controller [0000:c3:00.5]: enabled
+2024-02-20 13:00:24,694 DEBUG:	| Advanced Micro Devices, Inc. [AMD] USB controller [0000:c3:00.6]: enabled
+2024-02-20 13:00:24,695 DEBUG:	| PIXA3854:00 093A:0274 Mouse [i2c-PIXA3854:00]: enabled
+2024-02-20 13:00:24,695 DEBUG:	| Plug-n-play Real Time Clock [00:01]: enabled
+2024-02-20 13:00:24,695 DEBUG:	| Real Time Clock alarm timer [rtc0]: enabled
+2024-02-20 13:00:24,695 DEBUG:	| Thunderbolt domain [domain0]: enabled
+2024-02-20 13:00:24,695 DEBUG:	| Thunderbolt domain [domain1]: enabled
+2024-02-20 13:00:24,695 DEBUG:	| USB4 host controller [0-0]: enabled
+2024-02-20 13:00:24,695 DEBUG:	└─USB4 host controller [1-0]: enabled
+2024-02-20 13:00:24,699 DEBUG:	/*
+2024-02-20 13:00:24,700 DEBUG:	 * Intel ACPI Component Architecture
+2024-02-20 13:00:24,700 DEBUG:	 * AML/ASL+ Disassembler version 20230628 (64-bit version)
+2024-02-20 13:00:24,700 DEBUG:	 * Copyright (c) 2000 - 2023 Intel Corporation
+2024-02-20 13:00:24,700 DEBUG:	 *
+2024-02-20 13:00:24,700 DEBUG:	 * Disassembling to symbolic ASL+ operators
+2024-02-20 13:00:24,700 DEBUG:	 *
+2024-02-20 13:00:24,700 DEBUG:	 * Disassembly of /sys/firmware/acpi/tables/SSDT23, Tue Feb 20 13:00:24 2024
+2024-02-20 13:00:24,700 DEBUG:	 *
+2024-02-20 13:00:24,700 DEBUG:	 * Original Table Header:
+2024-02-20 13:00:24,700 DEBUG:	 *     Signature        "SSDT"
+2024-02-20 13:00:24,700 DEBUG:	 *     Length           0x00000C7F (3199)
+2024-02-20 13:00:24,700 DEBUG:	 *     Revision         0x02
+2024-02-20 13:00:24,700 DEBUG:	 *     Checksum         0x3F
+2024-02-20 13:00:24,700 DEBUG:	 *     OEM ID           "INSYDE"
+2024-02-20 13:00:24,700 DEBUG:	 *     OEM Table ID     "EDK2    "
+2024-02-20 13:00:24,700 DEBUG:	 *     OEM Revision     0x00000001 (1)
+2024-02-20 13:00:24,700 DEBUG:	 *     Compiler ID      "ACPI"
+2024-02-20 13:00:24,700 DEBUG:	 *     Compiler Version 0x00040000 (262144)
+2024-02-20 13:00:24,700 DEBUG:	 */
+2024-02-20 13:00:24,700 DEBUG:	DefinitionBlock ("", "SSDT", 2, "INSYDE", "EDK2    ", 0x00000001)
+2024-02-20 13:00:24,700 DEBUG:	{
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.GPIO, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GP17.ACP_, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GP17.AZAL, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GP17.MP2C, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GP17.XHC0, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GP17.XHC1, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GPP0, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GPP1, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GPP2, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GPP5, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GPP6, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GPP7, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.GPP7.DEV0, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.LPC0.EC0_, DeviceObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.LPC0.EC0_.OKEC, IntObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PCI0.LPC0.EC0_.Z009, MutexObj)
+2024-02-20 13:00:24,700 DEBUG:	    External (_SB_.PWRB, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M000, MethodObj)    // 1 Arguments
+2024-02-20 13:00:24,701 DEBUG:	    External (M037, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M046, IntObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M047, IntObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M050, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M051, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M052, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M053, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M054, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M055, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M056, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M057, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M058, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M059, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M062, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M068, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M069, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M070, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M071, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M072, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M074, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M075, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M076, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M077, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M078, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M079, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M080, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M081, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M082, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M083, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M084, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M085, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M086, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M087, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M088, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M089, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M090, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M091, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M092, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M093, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M094, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M095, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M096, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M097, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M098, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M099, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M100, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M101, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M102, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M103, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M104, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M105, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M106, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M107, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M108, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M109, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M110, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M115, BuffObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M116, BuffFieldObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M117, BuffFieldObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M118, BuffFieldObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M119, BuffFieldObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M120, BuffFieldObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M122, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M127, DeviceObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M128, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M131, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M132, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M133, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M134, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M135, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M136, FieldUnitObj)
+2024-02-20 13:00:24,701 DEBUG:	    External (M220, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M221, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M226, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M227, DeviceObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M229, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M231, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M233, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M235, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M23A, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M251, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M280, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M290, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M29A, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M310, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M31C, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M320, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M321, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M322, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M323, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M324, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M325, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M326, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M327, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M328, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M329, DeviceObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M32A, DeviceObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M32B, DeviceObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M330, DeviceObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M331, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M378, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M379, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M380, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M381, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M382, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M383, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M384, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M385, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M386, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M387, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M388, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M389, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M390, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M391, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M392, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M404, BuffObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M408, MutexObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M414, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M444, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M449, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M453, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M454, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M455, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M456, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M457, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M460, MethodObj)    // 7 Arguments
+2024-02-20 13:00:24,702 DEBUG:	    External (M4C0, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M4F0, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M610, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M620, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M631, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	    External (M652, FieldUnitObj)
+2024-02-20 13:00:24,702 DEBUG:	
+2024-02-20 13:00:24,702 DEBUG:	    Scope (\_SB.PCI0.LPC0.EC0)
+2024-02-20 13:00:24,702 DEBUG:	    {
+2024-02-20 13:00:24,702 DEBUG:	        OperationRegion (ECRM, EmbeddedControl, Zero, 0xFF)
+2024-02-20 13:00:24,702 DEBUG:	        Field (ECRM, ByteAcc, NoLock, Preserve)
+2024-02-20 13:00:24,702 DEBUG:	        {
+2024-02-20 13:00:24,702 DEBUG:	            Offset (0xCC),
+2024-02-20 13:00:24,702 DEBUG:	            PBCN,   8
+2024-02-20 13:00:24,702 DEBUG:	        }
+2024-02-20 13:00:24,702 DEBUG:	    }
+2024-02-20 13:00:24,702 DEBUG:	
+2024-02-20 13:00:24,702 DEBUG:	    Scope (\_SB.GPIO)
+2024-02-20 13:00:24,702 DEBUG:	    {
+2024-02-20 13:00:24,703 DEBUG:	        Method (_AEI, 0, NotSerialized)  // _AEI: ACPI Event Interrupts
+2024-02-20 13:00:24,703 DEBUG:	        {
+2024-02-20 13:00:24,703 DEBUG:	            Name (BUF0, ResourceTemplate ()
+2024-02-20 13:00:24,703 DEBUG:	            {
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Edge, ActiveHigh, ExclusiveAndWake, PullDefault, 0x1388,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x0000
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Level, ActiveHigh, ExclusiveAndWake, PullNone, 0x0000,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x003D
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Level, ActiveHigh, ExclusiveAndWake, PullNone, 0x0000,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x003E
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Level, ActiveHigh, ExclusiveAndWake, PullNone, 0x0000,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x003A
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Level, ActiveHigh, ExclusiveAndWake, PullNone, 0x0000,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x003B
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Edge, ActiveLow, ExclusiveAndWake, PullNone, 0x0000,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x0002
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Edge, ActiveLow, ExclusiveAndWake, PullNone, 0x0000,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x0006
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	                GpioInt (Edge, ActiveHigh, ExclusiveAndWake, PullNone, 0x0000,
+2024-02-20 13:00:24,703 DEBUG:	                    "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+2024-02-20 13:00:24,703 DEBUG:	                    )
+2024-02-20 13:00:24,703 DEBUG:	                    {   // Pin list
+2024-02-20 13:00:24,703 DEBUG:	                        0x0036
+2024-02-20 13:00:24,703 DEBUG:	                    }
+2024-02-20 13:00:24,703 DEBUG:	            })
+2024-02-20 13:00:24,703 DEBUG:	            M460 ("  OEM-ASL-\\_SB.GPIO._AEI\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,703 DEBUG:	            Return (BUF0) /* \_SB_.GPIO._AEI.BUF0 */
+2024-02-20 13:00:24,703 DEBUG:	        }
+2024-02-20 13:00:24,703 DEBUG:	
+2024-02-20 13:00:24,703 DEBUG:	        Method (_EVT, 1, Serialized)  // _EVT: Event
+2024-02-20 13:00:24,703 DEBUG:	        {
+2024-02-20 13:00:24,703 DEBUG:	            Name (HPDW, 0x55)
+2024-02-20 13:00:24,703 DEBUG:	            M460 ("  OEM-ASL-\\_SB.GPIO._EVT-Start Case %d\n", ToInteger (Arg0), Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,703 DEBUG:	            Switch (ToInteger (Arg0))
+2024-02-20 13:00:24,703 DEBUG:	            {
+2024-02-20 13:00:24,703 DEBUG:	                Case (Zero)
+2024-02-20 13:00:24,703 DEBUG:	                {
+2024-02-20 13:00:24,703 DEBUG:	                }
+2024-02-20 13:00:24,703 DEBUG:	                Case (0x02)
+2024-02-20 13:00:24,703 DEBUG:	                {
+2024-02-20 13:00:24,703 DEBUG:	                    M000 (0x3902)
+2024-02-20 13:00:24,703 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP0, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,703 DEBUG:	                    Notify (\_SB.PCI0.GPP0, 0x02) // Device Wake
+2024-02-20 13:00:24,703 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP1, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,703 DEBUG:	                    Notify (\_SB.PCI0.GPP1, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP2, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GPP2, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x03)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x3902)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP7, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GPP7, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x0B)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x390B)
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x11)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x3911)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP2, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GPP2, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x06)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x3912)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP6, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GPP6, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x18)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x3918)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP5, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GPP5, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x36)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x3936)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GP17.MP2C, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GP17.MP2C, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                    If ((HPDW == One))
+2024-02-20 13:00:24,704 DEBUG:	                    {
+2024-02-20 13:00:24,704 DEBUG:	                        M460 ("    Notify (\\_SB.PCI0.GP17.MP2C(HPDW):PWRB 0x80)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                        Notify (\_SB.PWRB, 0x80) // Status Change
+2024-02-20 13:00:24,704 DEBUG:	                    }
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x3A)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x393A)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GP17.XHC0, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GP17.XHC0, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x3B)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x393B)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GP17.XHC1, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GP17.XHC1, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x2A)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x392A)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GPP7.DEV0, 0x01)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GPP7.DEV0, One) // Device Check
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x3D)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x393D)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GP17.AZAL, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GP17.AZAL, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,704 DEBUG:	                Case (0x3E)
+2024-02-20 13:00:24,704 DEBUG:	                {
+2024-02-20 13:00:24,704 DEBUG:	                    M000 (0x393D)
+2024-02-20 13:00:24,704 DEBUG:	                    M460 ("    Notify (\\_SB.PCI0.GP17.ACP, 0x02)\n", Zero, Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,704 DEBUG:	                    Notify (\_SB.PCI0.GP17.ACP, 0x02) // Device Wake
+2024-02-20 13:00:24,704 DEBUG:	                }
+2024-02-20 13:00:24,705 DEBUG:	
+2024-02-20 13:00:24,705 DEBUG:	            }
+2024-02-20 13:00:24,705 DEBUG:	
+2024-02-20 13:00:24,705 DEBUG:	            M460 ("  OEM-ASL-\\_SB.GPIO._EVT-End Case %d\n", ToInteger (Arg0), Zero, Zero, Zero, Zero, Zero)
+2024-02-20 13:00:24,705 DEBUG:	        }
+2024-02-20 13:00:24,705 DEBUG:	    }
+2024-02-20 13:00:24,705 DEBUG:	}
+2024-02-20 13:00:39,007 DEBUG:	Suspend timer programmed for 0:00:10
+2024-02-20 13:00:39,011 DEBUG:	ACPI Lid (/proc/acpi/button/lid/LID0/state): open
+2024-02-20 13:00:41,011 INFO:	Started at 2024-02-20 13:00:41.011766 (cycle finish expected @ 2024-02-20 13:00:55.011783)
+2024-02-20 13:00:53,024 INFO:	Results from last s2idle cycle
+2024-02-20 13:00:53,032 DEBUG:	2024-02-20T20:06:49,930378+00:00 ACPI: EC: interrupt unblocked
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,100910+00:00 nvme nvme0: 16/0/0 default/read/poll queues
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,121287+00:00 atkbd serio0: Unknown key pressed (translated set 2, code 0x6b on isa0060/serio0).
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,121294+00:00 atkbd serio0: Use 'setkeycodes 6b <keycode>' to make it known.
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,122427+00:00 atkbd serio0: Unknown key released (translated set 2, code 0x6b on isa0060/serio0).
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,122434+00:00 atkbd serio0: Use 'setkeycodes 6b <keycode>' to make it known.
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,187105+00:00 typec port3-partner: PM: parent port3 should not be sleeping
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,224232+00:00 [drm:mes_v11_0_submit_pkt_and_poll_completion.constprop.0 [amdgpu]] *ERROR* MES failed to response msg=14
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,224373+00:00 [drm:amdgpu_mes_reg_write_reg_wait [amdgpu]] *ERROR* failed to reg_write_reg_wait
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,226465+00:00 [drm] PCIE GART of 512M enabled (table at 0x00000080FFD00000).
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,226601+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resuming...
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,230499+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resumed successfully!
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,230528+00:00 amdgpu 0000:c1:00.0: [drm] *ERROR* Error queueing DMUB command: status=4
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,234914+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:264
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,237400+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:272
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,239881+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:280
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,242362+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:288
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344255+00:00 [drm] VCN decode and encode initialized successfully(under DPG Mode).
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344403+00:00 amdgpu 0000:c1:00.0: [drm:jpeg_v4_0_hw_init [amdgpu]] JPEG decode initialized successfully.
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344624+00:00 amdgpu 0000:c1:00.0: amdgpu: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344627+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344628+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344629+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.0 uses VM inv eng 6 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344631+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.0 uses VM inv eng 7 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344632+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.1 uses VM inv eng 8 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344633+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.1 uses VM inv eng 9 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344634+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.1 uses VM inv eng 10 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344635+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.1 uses VM inv eng 11 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344636+00:00 amdgpu 0000:c1:00.0: amdgpu: ring sdma0 uses VM inv eng 12 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344637+00:00 amdgpu 0000:c1:00.0: amdgpu: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344639+00:00 amdgpu 0000:c1:00.0: amdgpu: ring jpeg_dec uses VM inv eng 1 on hub 8
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,344640+00:00 amdgpu 0000:c1:00.0: amdgpu: ring mes_kiq_3.1.0 uses VM inv eng 13 on hub 0
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,350311+00:00 [drm] ring gfx_32776.1.1 was added
+2024-02-20 13:00:53,033 DEBUG:	2024-02-20T20:06:50,350864+00:00 [drm] ring compute_32776.2.2 was added
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,351372+00:00 [drm] ring sdma_32776.3.3 was added
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,351403+00:00 [drm] ring gfx_32776.1.1 ib test pass
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,351433+00:00 [drm] ring compute_32776.2.2 ib test pass
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,351527+00:00 [drm] ring sdma_32776.3.3 ib test pass
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,365699+00:00 iwlwifi 0000:01:00.0: WRT: Invalid buffer destination
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,535711+00:00 iwlwifi 0000:01:00.0: WFPM_UMAC_PD_NOTIFICATION: 0x20
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,535806+00:00 iwlwifi 0000:01:00.0: WFPM_LMAC2_PD_NOTIFICATION: 0x1f
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,535896+00:00 iwlwifi 0000:01:00.0: WFPM_AUTH_KEY_0: 0x90
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,535987+00:00 iwlwifi 0000:01:00.0: CNVI_SCU_SEQ_DATA_DW9: 0x0
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,673452+00:00 OOM killer enabled.
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,673455+00:00 Restarting tasks ... done.
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,675508+00:00 random: crng reseeded on system resumption
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,678634+00:00 PM: suspend exit
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,757377+00:00 iwlwifi 0000:01:00.0: WRT: Invalid buffer destination
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,926320+00:00 iwlwifi 0000:01:00.0: WFPM_UMAC_PD_NOTIFICATION: 0x20
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,926496+00:00 iwlwifi 0000:01:00.0: WFPM_LMAC2_PD_NOTIFICATION: 0x1f
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,926583+00:00 iwlwifi 0000:01:00.0: WFPM_AUTH_KEY_0: 0x90
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:50,926672+00:00 iwlwifi 0000:01:00.0: CNVI_SCU_SEQ_DATA_DW9: 0x0
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:54,404503+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:54,731723+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:06:56,416865+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:07:02,048485+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:07:07,681526+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:07:13,313572+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:18:33,766322+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:18:34,068225+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:21:09,883027+00:00 warning: `ThreadPoolForeg' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:08,527542+00:00 i2c_designware AMDI0010:00: i2c_dw_handle_tx_abort: lost arbitration
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,014927+00:00 PM: suspend entry (s2idle)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,037037+00:00 Filesystems sync: 0.022 seconds
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,061512+00:00 Freezing user space processes
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,063414+00:00 Freezing user space processes completed (elapsed 0.001 seconds)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,063416+00:00 OOM killer disabled.
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,063417+00:00 Freezing remaining freezable tasks
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,064610+00:00 Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,064614+00:00 printk: Suspending console(s) (use no_console_suspend to debug)
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:30:28,529379+00:00 ACPI: EC: interrupt blocked
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:32:44,542268+00:00 ACPI: EC: interrupt unblocked
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:32:44,711098+00:00 nvme nvme0: 16/0/0 default/read/poll queues
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:32:44,834886+00:00 [drm:mes_v11_0_submit_pkt_and_poll_completion.constprop.0 [amdgpu]] *ERROR* MES failed to response msg=14
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:32:44,835020+00:00 atkbd serio0: Unknown key pressed (translated set 2, code 0x6b on isa0060/serio0).
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:32:44,835024+00:00 atkbd serio0: Use 'setkeycodes 6b <keycode>' to make it known.
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:32:44,835086+00:00 [drm:amdgpu_mes_reg_write_reg_wait [amdgpu]] *ERROR* failed to reg_write_reg_wait
+2024-02-20 13:00:53,034 DEBUG:	2024-02-20T20:32:44,835511+00:00 atkbd serio0: Unknown key released (translated set 2, code 0x6b on isa0060/serio0).
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,835513+00:00 atkbd serio0: Use 'setkeycodes 6b <keycode>' to make it known.
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,837258+00:00 [drm] PCIE GART of 512M enabled (table at 0x00000080FFD00000).
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,837390+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resuming...
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,840997+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resumed successfully!
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,841051+00:00 amdgpu 0000:c1:00.0: [drm] *ERROR* Error queueing DMUB command: status=4
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,845987+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:264
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,848469+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:272
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,850949+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:280
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,853430+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:288
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,954759+00:00 [drm] VCN decode and encode initialized successfully(under DPG Mode).
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,954879+00:00 amdgpu 0000:c1:00.0: [drm:jpeg_v4_0_hw_init [amdgpu]] JPEG decode initialized successfully.
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955105+00:00 amdgpu 0000:c1:00.0: amdgpu: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955108+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955110+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955111+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.0 uses VM inv eng 6 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955112+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.0 uses VM inv eng 7 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955113+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.1 uses VM inv eng 8 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955114+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.1 uses VM inv eng 9 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955115+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.1 uses VM inv eng 10 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955116+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.1 uses VM inv eng 11 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955118+00:00 amdgpu 0000:c1:00.0: amdgpu: ring sdma0 uses VM inv eng 12 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955119+00:00 amdgpu 0000:c1:00.0: amdgpu: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955120+00:00 amdgpu 0000:c1:00.0: amdgpu: ring jpeg_dec uses VM inv eng 1 on hub 8
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,955121+00:00 amdgpu 0000:c1:00.0: amdgpu: ring mes_kiq_3.1.0 uses VM inv eng 13 on hub 0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,961521+00:00 [drm] ring gfx_32776.1.1 was added
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,962031+00:00 [drm] ring compute_32776.2.2 was added
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,962495+00:00 [drm] ring sdma_32776.3.3 was added
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,962536+00:00 [drm] ring gfx_32776.1.1 ib test pass
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,962562+00:00 [drm] ring compute_32776.2.2 ib test pass
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,962663+00:00 [drm] ring sdma_32776.3.3 ib test pass
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:44,976428+00:00 iwlwifi 0000:01:00.0: WRT: Invalid buffer destination
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,146485+00:00 iwlwifi 0000:01:00.0: WFPM_UMAC_PD_NOTIFICATION: 0x20
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,146580+00:00 iwlwifi 0000:01:00.0: WFPM_LMAC2_PD_NOTIFICATION: 0x1f
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,146672+00:00 iwlwifi 0000:01:00.0: WFPM_AUTH_KEY_0: 0x90
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,146762+00:00 iwlwifi 0000:01:00.0: CNVI_SCU_SEQ_DATA_DW9: 0x0
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,265192+00:00 ucsi_acpi USBC000:00: failed to re-enable notifications (-5)
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,284521+00:00 OOM killer enabled.
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,284524+00:00 Restarting tasks ... done.
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,288727+00:00 random: crng reseeded on system resumption
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,298866+00:00 PM: suspend exit
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,378784+00:00 ucsi_acpi USBC000:00: possible UCSI driver bug 1
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:45,378793+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: GET_CONNECTOR_STATUS failed (-22)
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:46,860821+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:47,161825+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:32:50,835643+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T20:46:38,170485+00:00 i2c_designware AMDI0010:00: i2c_dw_handle_tx_abort: lost arbitration
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T21:03:25,607255+00:00 PM: suspend entry (s2idle)
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T21:03:25,701886+00:00 Filesystems sync: 0.094 seconds
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T21:03:25,726725+00:00 Freezing user space processes
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T21:03:25,728845+00:00 Freezing user space processes completed (elapsed 0.002 seconds)
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T21:03:25,728847+00:00 OOM killer disabled.
+2024-02-20 13:00:53,035 DEBUG:	2024-02-20T21:03:25,728848+00:00 Freezing remaining freezable tasks
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:03:25,730058+00:00 Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:03:25,730062+00:00 printk: Suspending console(s) (use no_console_suspend to debug)
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:03:26,157283+00:00 ACPI: EC: interrupt blocked
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,532103+00:00 ACPI: EC: interrupt unblocked
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,705176+00:00 nvme nvme0: 16/0/0 default/read/poll queues
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,749347+00:00 atkbd serio0: Unknown key pressed (translated set 2, code 0x6b on isa0060/serio0).
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,749355+00:00 atkbd serio0: Use 'setkeycodes 6b <keycode>' to make it known.
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,749829+00:00 atkbd serio0: Unknown key released (translated set 2, code 0x6b on isa0060/serio0).
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,749837+00:00 atkbd serio0: Use 'setkeycodes 6b <keycode>' to make it known.
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,794182+00:00 typec port0-partner: PM: parent port0 should not be sleeping
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,834757+00:00 [drm:mes_v11_0_submit_pkt_and_poll_completion.constprop.0 [amdgpu]] *ERROR* MES failed to response msg=14
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,834975+00:00 [drm:amdgpu_mes_reg_write_reg_wait [amdgpu]] *ERROR* failed to reg_write_reg_wait
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,837085+00:00 [drm] PCIE GART of 512M enabled (table at 0x00000080FFD00000).
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,837224+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resuming...
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,839641+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resumed successfully!
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,839703+00:00 amdgpu 0000:c1:00.0: [drm] *ERROR* Error queueing DMUB command: status=4
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,844657+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:264
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,847258+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:272
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,849857+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:280
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,852457+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:288
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953183+00:00 [drm] VCN decode and encode initialized successfully(under DPG Mode).
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953329+00:00 amdgpu 0000:c1:00.0: [drm:jpeg_v4_0_hw_init [amdgpu]] JPEG decode initialized successfully.
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953588+00:00 amdgpu 0000:c1:00.0: amdgpu: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953592+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953594+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953595+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.0 uses VM inv eng 6 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953597+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.0 uses VM inv eng 7 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953598+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.1 uses VM inv eng 8 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953600+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.1 uses VM inv eng 9 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953601+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.1 uses VM inv eng 10 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953603+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.1 uses VM inv eng 11 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953604+00:00 amdgpu 0000:c1:00.0: amdgpu: ring sdma0 uses VM inv eng 12 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953606+00:00 amdgpu 0000:c1:00.0: amdgpu: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953607+00:00 amdgpu 0000:c1:00.0: amdgpu: ring jpeg_dec uses VM inv eng 1 on hub 8
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,953609+00:00 amdgpu 0000:c1:00.0: amdgpu: ring mes_kiq_3.1.0 uses VM inv eng 13 on hub 0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,959152+00:00 [drm] ring gfx_32776.1.1 was added
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,959688+00:00 [drm] ring compute_32776.2.2 was added
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,960159+00:00 [drm] ring sdma_32776.3.3 was added
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,960186+00:00 [drm] ring gfx_32776.1.1 ib test pass
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,960213+00:00 [drm] ring compute_32776.2.2 ib test pass
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,960299+00:00 [drm] ring sdma_32776.3.3 ib test pass
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:46,974982+00:00 iwlwifi 0000:01:00.0: WRT: Invalid buffer destination
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,144925+00:00 iwlwifi 0000:01:00.0: WFPM_UMAC_PD_NOTIFICATION: 0x20
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,145021+00:00 iwlwifi 0000:01:00.0: WFPM_LMAC2_PD_NOTIFICATION: 0x1f
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,145210+00:00 iwlwifi 0000:01:00.0: WFPM_AUTH_KEY_0: 0x90
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,145299+00:00 iwlwifi 0000:01:00.0: CNVI_SCU_SEQ_DATA_DW9: 0x0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,283668+00:00 OOM killer enabled.
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,283671+00:00 Restarting tasks ... done.
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,287322+00:00 random: crng reseeded on system resumption
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,297632+00:00 PM: suspend exit
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,359686+00:00 iwlwifi 0000:01:00.0: WRT: Invalid buffer destination
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,529345+00:00 iwlwifi 0000:01:00.0: WFPM_UMAC_PD_NOTIFICATION: 0x20
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,529442+00:00 iwlwifi 0000:01:00.0: WFPM_LMAC2_PD_NOTIFICATION: 0x1f
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,529531+00:00 iwlwifi 0000:01:00.0: WFPM_AUTH_KEY_0: 0x90
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:47,529622+00:00 iwlwifi 0000:01:00.0: CNVI_SCU_SEQ_DATA_DW9: 0x0
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:48,842939+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,036 DEBUG:	2024-02-20T21:17:49,147888+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T21:17:52,230101+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T21:17:57,862367+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T21:18:03,494211+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T21:18:09,126037+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T21:58:36,040043+00:00 i2c_hid_acpi i2c-FRMW0005:00: i2c_hid_get_input: incomplete report (7/65535)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:56:59,652616+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:57:08,963238+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:57:09,235126+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:04,960165+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: GET_CONNECTOR_STATUS failed (-5)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:05,080589+00:00 ucsi_acpi USBC000:00: unknown error 0
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:05,080597+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: GET_CONNECTOR_STATUS failed (-5)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:11,423625+00:00 ucsi_acpi USBC000:00: unknown error 0
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:11,423646+00:00 ucsi_acpi USBC000:00: UCSI_GET_PDOS failed (-5)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:17,061660+00:00 ucsi_acpi USBC000:00: unknown error 0
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:17,061676+00:00 ucsi_acpi USBC000:00: UCSI_GET_PDOS failed (-5)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T22:58:22,597377+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:17:12,619204+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:17:12,888159+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:18:27,554034+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:18:27,825076+00:00 usb 1-4: reset full-speed USB device number 2 using xhci_hcd
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:20:27,151901+00:00 ucsi_acpi USBC000:00: ucsi_handle_connector_change: ACK failed (-110)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,515714+00:00 PM: suspend entry (s2idle)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,536498+00:00 Filesystems sync: 0.020 seconds
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,579813+00:00 Freezing user space processes
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,582950+00:00 Freezing user space processes completed (elapsed 0.003 seconds)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,582956+00:00 OOM killer disabled.
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,582957+00:00 Freezing remaining freezable tasks
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,584223+00:00 Freezing remaining freezable tasks completed (elapsed 0.001 seconds)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:09,584232+00:00 printk: Suspending console(s) (use no_console_suspend to debug)
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,436833+00:00 PM: suspend of devices complete after 782.301 msecs
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,436846+00:00 PM: start suspend of devices complete after 852.562 msecs
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,437481+00:00 Disabling GPIO #5 interrupt for suspend.
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,437502+00:00 Disabling GPIO #84 interrupt for suspend.
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,438156+00:00 PM: late suspend of devices complete after 1.304 msecs
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,438613+00:00 ACPI: EC: interrupt blocked
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492489+00:00 PM: noirq suspend of devices complete after 54.174 msecs
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492511+00:00 ACPI: \_SB_.PCI0.GPP0: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492519+00:00 ACPI: \_SB_.PCI0.GPP2: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492523+00:00 ACPI: \_SB_.PCI0.GPP6: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492527+00:00 ACPI: \_SB_.PCI0.GPP5: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492530+00:00 ACPI: \_SB_.PCI0.GPP7: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492534+00:00 ACPI: \_SB_.PCI0.GP11.SWUS: LPI: Constraint not met; min power state:D3hot current power state:D0
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492538+00:00 ACPI: \_SB_.PCI0.GP12.SWUS: LPI: Constraint not met; min power state:D3hot current power state:D0
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492542+00:00 ACPI: \_SB_.PCI0.GPP7.DEV0: LPI: Constraint not met; min power state:D3hot current power state:D0
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492546+00:00 ACPI: \_SB_.PCI0.GPP2.WWAN: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492549+00:00 ACPI: \_SB_.PCI0.GPP5.RTL8: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492552+00:00 ACPI: \_SB_.PCI0.GPP5.RUSB: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492555+00:00 ACPI: \_SB_.PCI0.GPP6.WLAN: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492566+00:00 ACPI: \_SB_.PCI0.GP18.IPU_: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492569+00:00 ACPI: \_SB_.PCI0.GP19.XHC2: LPI: Constraint not met; min power state:D3hot current power state:D0
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492577+00:00 ACPI: \_SB_.PLTF.C000: LPI: Device not power manageable
+2024-02-20 13:00:53,037 DEBUG:	2024-02-20T23:21:10,492580+00:00 ACPI: \_SB_.PLTF.C001: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492583+00:00 ACPI: \_SB_.PLTF.C002: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492586+00:00 ACPI: \_SB_.PLTF.C003: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492589+00:00 ACPI: \_SB_.PLTF.C004: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492592+00:00 ACPI: \_SB_.PLTF.C005: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492595+00:00 ACPI: \_SB_.PLTF.C006: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492599+00:00 ACPI: \_SB_.PLTF.C007: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492602+00:00 ACPI: \_SB_.PLTF.C008: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492605+00:00 ACPI: \_SB_.PLTF.C009: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492608+00:00 ACPI: \_SB_.PLTF.C00A: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492611+00:00 ACPI: \_SB_.PLTF.C00B: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492614+00:00 ACPI: \_SB_.PLTF.C00C: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492617+00:00 ACPI: \_SB_.PLTF.C00D: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492620+00:00 ACPI: \_SB_.PLTF.C00E: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,492623+00:00 ACPI: \_SB_.PLTF.C00F: LPI: Device not power manageable
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,493363+00:00 ACPI: \_SB_.PEP_: Successfully transitioned to state screen off
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,712400+00:00 ACPI: \_SB_.PEP_: Successfully transitioned to state lps0 ms entry
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,712781+00:00 ACPI: \_SB_.PEP_: Successfully transitioned to state lps0 entry
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,713080+00:00 PM: suspend-to-idle
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:10,713086+00:00 amd_pmc: SMU idlemask s0i3: 0x3ffbbeb5
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,771530+00:00 Timekeeping suspended for 7.789 seconds
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,771584+00:00 PM: Triggering wakeup from IRQ 9
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,771682+00:00 ACPI: PM: ACPI fixed event wakeup
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,771688+00:00 PM: resume from suspend-to-idle
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,773174+00:00 ACPI: \_SB_.PEP_: Successfully transitioned to state lps0 exit
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,927958+00:00 ACPI: \_SB_.PEP_: Successfully transitioned to state lps0 ms exit
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,928282+00:00 ACPI: \_SB_.PEP_: Successfully transitioned to state screen on
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:18,928373+00:00 ACPI: EC: interrupt unblocked
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,088772+00:00 PM: noirq resume of devices complete after 160.484 msecs
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,091380+00:00 PM: early resume of devices complete after 2.376 msecs
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,104606+00:00 nvme nvme0: 16/0/0 default/read/poll queues
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,232735+00:00 [drm:mes_v11_0_submit_pkt_and_poll_completion.constprop.0 [amdgpu]] *ERROR* MES failed to response msg=14
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,232970+00:00 [drm:amdgpu_mes_reg_write_reg_wait [amdgpu]] *ERROR* failed to reg_write_reg_wait
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,235107+00:00 [drm] PCIE GART of 512M enabled (table at 0x00000080FFD00000).
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,235204+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resuming...
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,237604+00:00 amdgpu 0000:c1:00.0: amdgpu: SMU is resumed successfully!
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,237670+00:00 amdgpu 0000:c1:00.0: [drm] *ERROR* Error queueing DMUB command: status=4
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,242675+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:264
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,245272+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:272
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,247867+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:280
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,250463+00:00 amdgpu 0000:c1:00.0: [drm] REG_WAIT timeout 1us * 1000 tries - dcn314_dsc_pg_control line:288
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438049+00:00 [drm] VCN decode and encode initialized successfully(under DPG Mode).
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438161+00:00 amdgpu 0000:c1:00.0: [drm:jpeg_v4_0_hw_init [amdgpu]] JPEG decode initialized successfully.
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438422+00:00 amdgpu 0000:c1:00.0: amdgpu: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438426+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438428+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438429+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.0 uses VM inv eng 6 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438431+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.0 uses VM inv eng 7 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438432+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.0.1 uses VM inv eng 8 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438434+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.1.1 uses VM inv eng 9 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438435+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.2.1 uses VM inv eng 10 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438437+00:00 amdgpu 0000:c1:00.0: amdgpu: ring comp_1.3.1 uses VM inv eng 11 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438439+00:00 amdgpu 0000:c1:00.0: amdgpu: ring sdma0 uses VM inv eng 12 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438440+00:00 amdgpu 0000:c1:00.0: amdgpu: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438442+00:00 amdgpu 0000:c1:00.0: amdgpu: ring jpeg_dec uses VM inv eng 1 on hub 8
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,438443+00:00 amdgpu 0000:c1:00.0: amdgpu: ring mes_kiq_3.1.0 uses VM inv eng 13 on hub 0
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,444334+00:00 [drm] ring gfx_32776.1.1 was added
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,444857+00:00 [drm] ring compute_32776.2.2 was added
+2024-02-20 13:00:53,038 DEBUG:	2024-02-20T23:21:19,445367+00:00 [drm] ring sdma_32776.3.3 was added
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,445425+00:00 [drm] ring gfx_32776.1.1 ib test pass
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,445459+00:00 [drm] ring compute_32776.2.2 ib test pass
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,445552+00:00 [drm] ring sdma_32776.3.3 ib test pass
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,461345+00:00 iwlwifi 0000:01:00.0: WRT: Invalid buffer destination
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,631438+00:00 iwlwifi 0000:01:00.0: WFPM_UMAC_PD_NOTIFICATION: 0x20
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,631530+00:00 iwlwifi 0000:01:00.0: WFPM_LMAC2_PD_NOTIFICATION: 0x1f
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,631620+00:00 iwlwifi 0000:01:00.0: WFPM_AUTH_KEY_0: 0x90
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,631710+00:00 iwlwifi 0000:01:00.0: CNVI_SCU_SEQ_DATA_DW9: 0x0
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,775043+00:00 PM: resume of devices complete after 683.649 msecs
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,777581+00:00 OOM killer enabled.
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,777583+00:00 Restarting tasks ... done.
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,782728+00:00 random: crng reseeded on system resumption
+2024-02-20 13:00:53,039 DEBUG:	2024-02-20T23:21:19,794812+00:00 PM: suspend exit
+2024-02-20 13:00:53,039 DEBUG:	
+2024-02-20 13:00:53,039 INFO:	○ Suspend count: 3
+2024-02-20 13:00:53,039 INFO:	○ Hardware sleep cycle count: 1
+2024-02-20 13:00:53,039 INFO:	○ Wakeups triggered from IRQs: [9]
+2024-02-20 13:00:53,039 DEBUG:	Used Microsoft uPEP GUID in LPS0 _DSM
+2024-02-20 13:00:53,039 INFO:	○ Woke up from IRQ 9 (IR-IO-APIC 9-fasteoi acpi)
+2024-02-20 13:00:53,040 INFO:	○ gpe0B increased from 289 to 297
+2024-02-20 13:00:53,041 DEBUG:	ACPI Lid (/proc/acpi/button/lid/LID0/state): open
+2024-02-20 13:00:53,041 INFO:	✅ Userspace suspended for 0:00:12.029593
+2024-02-20 13:00:53,041 DEBUG:	Kernel suspended for total of 0:00:07.789000 (64.75%)
+2024-02-20 13:00:53,041 INFO:	✅ In a hardware sleep state for 0:00:07.512298 (62.45%)
+2024-02-20 13:00:53,043 DEBUG:	BAT1 charge level is 2119000 µAh
+2024-02-20 13:00:53,043 INFO:	🔋 Battery BAT1 ( ) is operating at 99.02% of design

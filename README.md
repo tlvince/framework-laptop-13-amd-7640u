@@ -59,7 +59,9 @@ Everything works of the box as of Linux v6.5 (>=6.7 recommended) with firmware v
 ## Sleep
 
 - S3 sleep unsupported
+  - S0ix supported, reaches S0i3.0
 - consumed ~4.7% battery in ~12 hours
+- Debug via [drm/amd amd_s2idle.py](https://gitlab.freedesktop.org/drm/amd/-/blob/d0b86c9969b4e4d48629a574363065702bf8b14e/scripts/amd_s2idle.py)
 
 ## Battery
 
