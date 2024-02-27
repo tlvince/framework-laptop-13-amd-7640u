@@ -9,7 +9,7 @@ Everything works of the box as of Linux v6.5 (>=6.7 recommended) with firmware v
 - [AMD Ryzen 7640U](https://www.amd.com/en/product/13196) (Phoenix, Zen 4)
 - [SK hynix Platinum P41](https://ssd.skhynix.com/platinum_p41/) 1TB SSD
 - [Crucial CT2K16G56C46S5](https://uk.crucial.com/memory/DDR5/CT2K16G56C46S5) 32GB DDR5-5600 SODIMM
-- [Matte display](https://frame.work/gb/en/products/display-kit?v=FRANGX0001) 13.5", 3:2, 2256x1504, 204 ppi, 400 nits
+- [BOE NE135FBM-N41 v8.2 (matte)](https://www.panelook.com/NE135FBM-N41_BOE_13.5_LCM_overview_44979.html) 13.5", 3:2, 2256x1504, 204 ppi, 400 nits, eDP1.4, [40 pins](https://github.com/FrameworkComputer/Framework-Laptop-13/tree/57357b797447b55ec7afcaf31b2fe731e7a48144/Display#pinout), [DC-mode dimming](https://github.com/FrameworkComputer/Framework-Laptop-13/tree/57357b797447b55ec7afcaf31b2fe731e7a48144/Mainboard#display-interface) (not PWM)
 - 55Wh battery
 - RZ616/MT7922 WiFi adapter
 - 4x [USB-C Expansion Cards](https://frame.work/gb/en/products/usb-c-expansion-card)
