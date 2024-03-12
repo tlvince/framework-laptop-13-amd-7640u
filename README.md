@@ -2,7 +2,7 @@
 
 Device notes and configuration under Linux for the [Framework Laptop 13 AMD Ryzen 7040 Series](https://frame.work/gb/en/products/laptop-diy-13-gen-amd?tab=overview) Ryzen 5 7640U variant, DIY edition.
 
-Everything works of the box as of Linux v6.5 (>=6.7 recommended) with firmware version 03.03.
+Everything works of the box as of Linux v6.5 (>=6.8 recommended) with firmware version 03.03.
 
 ## Specs
 
@@ -25,19 +25,21 @@ Everything works of the box as of Linux v6.5 (>=6.7 recommended) with firmware v
 - [x] System freezes: update to [BIOS version 03.03](https://knowledgebase.frame.work/en_us/framework-laptop-bios-and-driver-releases-amd-ryzen-7040-series-r1rXGVL16)
 - [x] Fingerprint reader fails to register: update [fingerprint reader firmware](https://knowledgebase.frame.work/en_us/updating-fingerprint-reader-firmware-on-linux-for-13th-gen-and-amd-ryzen-7040-series-laptops-HJrvxv_za)
 - [x] Graphical glitches: [increase iGPU RAM](https://knowledgebase.frame.work/en_us/allocate-additional-ram-to-igpu-framework-laptop-13-amd-ryzen-7040-series-BkpPUPQa)
+- [x] [vaapi vp9 decoding glitches](https://gitlab.freedesktop.org/mesa/mesa/-/issues/8044): fixed in [linux-firmware@97733278](https://gitlab.com/kernel-firmware/linux-firmware/-/commit/977332782302476e1c863b09b840f463d0378807)
 - [ ] Further [AMDgpu instability and performance issues](https://community.frame.work/t/active-upstream-amdgpu-issues-affecting-ryzen-7840u-igpu-780m/41053)
 - [x] MT7922 WiFi limited to 802.11n (WiFi 4) and 2.4GHz: configure the [regulatory domain](https://wiki.archlinux.org/index.php?title=Network_configuration/Wireless&oldid=791904#Respecting_the_regulatory_domain)
 - [ ] `ectool` [unsupported](https://community.frame.work/t/what-ec-is-used/38574/2): pending [kernel patches](https://lore.kernel.org/chrome-platform/20231005160701.19987-1-dustin@howett.net/), [workaround via fork](https://community.frame.work/t/exploring-the-embedded-controller/12846/122)
 - [x] system wakes if AC is connected during sleep: pending firmware update, workaround in [Linux >=6.7](https://github.com/torvalds/linux/commit/a55bdad5dfd1efd4ed9ffe518897a21ca8e4e193) (via [kernel patch](https://lore.kernel.org/platform-driver-x86/20231212045006.97581-1-mario.limonciello@amd.com/), [workaround via udev rules](https://community.frame.work/t/tracking-framework-amd-ryzen-7040-series-lid-wakeup-behavior-feedback/39128/45))
 - [ ] Bluetooth LE Audio unsupported by MT7922: see [MediaTek MT7922 controller crashes after LE Setup Isochronous Data Path](https://lore.kernel.org/linux-bluetooth/38cb99f2b63dc55763e9e2c8ae4d4cb14afc6770.camel@tlvince.com/)
-- [ ] [Systemd suspend-then-hibernate wakes up after 5 minutes](https://community.frame.work/t/resolved-systemd-suspend-then-hibernate-wakes-up-after-5-minutes/39392): fixed in [Linux >=6.8-rc.1](https://github.com/torvalds/linux/commit/3d762e21d56370a43478b55e604b4a83dd85aafc) via [kernel patch](https://lore.kernel.org/linux-kernel/20231106162310.85711-1-mario.limonciello@amd.com/), workaround: `rtc_cmos.use_acpi_alarm=1`
+- [x] [Systemd suspend-then-hibernate wakes up after 5 minutes](https://community.frame.work/t/resolved-systemd-suspend-then-hibernate-wakes-up-after-5-minutes/39392): fixed in [Linux >=6.8-rc.1](https://github.com/torvalds/linux/commit/3d762e21d56370a43478b55e604b4a83dd85aafc) via [kernel patch](https://lore.kernel.org/linux-kernel/20231106162310.85711-1-mario.limonciello@amd.com/), workaround: `rtc_cmos.use_acpi_alarm=1`
 - [x] power-profiles-daemon does not set EPP: fixed in [v0.20](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/commit/0d3030b6109156a093b73c66aea2ef3118a79650#9f621eb5fd3bcb2fa5c7bd228c9b1ad42edc46c8)
 - [x] HDMI and DisplayPort expansion cards do not autosuspend: fixed in [systemd v255](https://github.com/systemd/systemd/commit/9023630cb7025650aa4d01ee794b0bb68bfdf2c1) (via [systemd patch](https://github.com/systemd/systemd/pull/30131))
 - [x] [ambient light sensor fails to init](https://bugzilla.kernel.org/show_bug.cgi?id=218223): fixed in [Linux >=6.7](https://github.com/torvalds/linux/commit/b9670ee2e975e1cb6751019d5dc5c193aecd8ba2)
-- [ ] [high power use when decoding H264 & vp09 with vaapi (software decoding is more efficient)](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10223) and [Power consumption for HW accelerated video decoding for Radeon iGPUs is simply outrageous](https://gitlab.freedesktop.org/drm/amd/-/issues/3195)
+- [ ] [high power use when decoding H264 & vp09 with vaapi (software decoding is more efficient)](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10223) and [Power consumption for HW accelerated video decoding for Radeon iGPUs is simply outrageous](https://gitlab.freedesktop.org/drm/amd/-/issues/3195): workaround: use software video decoding
 - [x] [Headset microphone not selectable as an input source](https://community.frame.work/t/resolved-headset-mic-on-amd-fw13-running-fedora-39/38847): fixed in Linux >=6.6.8 (via [kernel patch](https://github.com/tiwai/sound/commit/33038efb64f7576bac635164021f5c984d4c755f), [workaround via kernel params](https://github.com/NixOS/nixos-hardware/blob/fa194fc484fd7270ab324bb985593f71102e84d1/framework/13-inch/common/default.nix#L7-L13))
-- [ ] [ucsi_acpi errors](https://community.frame.work/t/tracking-anyone-else-seeing-usbcon-pd-error-spam-in-dmesg-user-request/40072) (USB Power Delivery): pending [firmware update](https://community.frame.work/t/amd-framework-usb-c-charger-compatibility-issues/39323/36)
-- [ ] [PCIe not utilising full USB 4 40Gb/s link speeds](https://community.frame.work/t/responded-framework-13-usb-4-pcie-lanes/40246/): fixed in [Linux >=6.8-rc.1](https://github.com/torvalds/linux/commit/466a7d115326ece682c2b60d1c77d1d0b9010b4f) via [kernel patch](https://gitlab.freedesktop.org/drm/amd/-/issues/2925#note_2240809)
+- [ ] [ucsi_acpi errors](https://community.frame.work/t/tracking-anyone-else-seeing-usbcon-pd-error-spam-in-dmesg-user-request/40072)
+- [x] [USB Power Delivery issues with <60W chargers](https://community.frame.work/t/amd-framework-usb-c-charger-compatibility-issues/39323/36): fixed in [3.03b firmware update](https://community.frame.work/t/framework-13-amd-ryzen-7040-bios-3-03b-beta/46479)
+- [x] [PCIe not utilising full USB 4 40Gb/s link speeds](https://community.frame.work/t/responded-framework-13-usb-4-pcie-lanes/40246/): fixed in [Linux >=6.8-rc.1](https://github.com/torvalds/linux/commit/466a7d115326ece682c2b60d1c77d1d0b9010b4f) via [kernel patch](https://gitlab.freedesktop.org/drm/amd/-/issues/2925#note_2240809)
 
 ## Enhancements
 
