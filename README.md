@@ -24,7 +24,7 @@ Everything works of the box as of Linux v6.5 (>=6.8 recommended) with firmware v
 
 - [x] System freezes: update to [BIOS version 03.03](https://knowledgebase.frame.work/en_us/framework-laptop-bios-and-driver-releases-amd-ryzen-7040-series-r1rXGVL16)
 - [x] Fingerprint reader fails to register: update [fingerprint reader firmware](https://knowledgebase.frame.work/en_us/updating-fingerprint-reader-firmware-on-linux-for-13th-gen-and-amd-ryzen-7040-series-laptops-HJrvxv_za)
-- [x] Graphical glitches: [increase iGPU RAM](https://knowledgebase.frame.work/en_us/allocate-additional-ram-to-igpu-framework-laptop-13-amd-ryzen-7040-series-BkpPUPQa)
+- [x] [Graphical corruption](https://community.frame.work/t/tracking-graphical-corruption-in-fedora-39-amd-3-03-bios/39073), [blinking/flashing white screen](https://gitlab.freedesktop.org/drm/amd/-/issues/3187): [workaround](https://gitlab.freedesktop.org/drm/amd/-/issues/3187#note_2292242): `amdgpu.sg_display=0` or [increase iGPU RAM](https://knowledgebase.frame.work/en_us/allocate-additional-ram-to-igpu-framework-laptop-13-amd-ryzen-7040-series-BkpPUPQa) in BIOS
 - [x] [vaapi vp9 decoding glitches](https://gitlab.freedesktop.org/mesa/mesa/-/issues/8044): fixed in [linux-firmware@97733278](https://gitlab.com/kernel-firmware/linux-firmware/-/commit/977332782302476e1c863b09b840f463d0378807)
 - [ ] Further [AMDgpu instability and performance issues](https://community.frame.work/t/active-upstream-amdgpu-issues-affecting-ryzen-7840u-igpu-780m/41053)
 - [x] MT7922 WiFi limited to 802.11n (WiFi 4) and 2.4GHz: configure the [regulatory domain](https://wiki.archlinux.org/index.php?title=Network_configuration/Wireless&oldid=791904#Respecting_the_regulatory_domain)
