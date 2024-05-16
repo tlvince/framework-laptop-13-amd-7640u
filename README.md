@@ -2,7 +2,7 @@
 
 Device notes and configuration under Linux for the [Framework Laptop 13 AMD Ryzen 7040 Series](https://frame.work/gb/en/products/laptop-diy-13-gen-amd?tab=overview) Ryzen 5 7640U variant, DIY edition.
 
-Everything works of the box as of Linux v6.5 (>=6.8 recommended) with firmware version 03.03 ([03.05](https://knowledgebase.frame.work/framework-laptop-bios-and-driver-releases-amd-ryzen-7040-series-r1rXGVL16) recommended).
+Everything works of the box as of Linux v6.5 (>=6.9 recommended) with firmware version 03.03 ([03.05](https://knowledgebase.frame.work/framework-laptop-bios-and-driver-releases-amd-ryzen-7040-series-r1rXGVL16) recommended).
 
 ## Specs
 
@@ -29,7 +29,7 @@ Everything works of the box as of Linux v6.5 (>=6.8 recommended) with firmware v
 - [x] Further [AMDgpu instability and performance issues](https://community.frame.work/t/active-upstream-amdgpu-issues-affecting-ryzen-7840u-igpu-780m/41053)
 - [x] MT7922 WiFi limited to 802.11n (WiFi 4) and 2.4GHz: configure the [regulatory domain](https://wiki.archlinux.org/index.php?title=Network_configuration/Wireless&oldid=791904#Respecting_the_regulatory_domain)
 - [ ] `ectool` [unsupported](https://community.frame.work/t/what-ec-is-used/38574/2): pending [kernel patches](https://lore.kernel.org/chrome-platform/20231005160701.19987-1-dustin@howett.net/), [workaround via fork](https://community.frame.work/t/exploring-the-embedded-controller/12846/122)
-- [ ] system wakes if AC is connected during sleep: pending firmware update, BIOS 03.05 [workaround via udev rules](https://community.frame.work/t/tracking-framework-amd-ryzen-7040-series-lid-wakeup-behavior-feedback/39128/45) (pending [kernel patch](https://github.com/torvalds/linux/commit/f609e7b1b49e4d15cf107d2069673ee63860c398)), BIOS 03.03 workaround in [Linux >=6.7](https://github.com/torvalds/linux/commit/a55bdad5dfd1efd4ed9ffe518897a21ca8e4e193) (via [kernel patch](https://lore.kernel.org/platform-driver-x86/20231212045006.97581-1-mario.limonciello@amd.com/))
+- [x] system wakes if AC is connected during sleep: pending firmware update, BIOS 03.05 workaround in [Linux >=6.9](https://github.com/torvalds/linux/commit/f609e7b1b49e4d15cf107d2069673ee63860c398), BIOS 03.03 workaround in [Linux >=6.7](https://github.com/torvalds/linux/commit/a55bdad5dfd1efd4ed9ffe518897a21ca8e4e193), otherwise [workaround via udev rules](https://community.frame.work/t/tracking-framework-amd-ryzen-7040-series-lid-wakeup-behavior-feedback/39128/45)
 - [ ] Bluetooth LE Audio unsupported by MT7922: see [MediaTek MT7922 controller crashes after LE Setup Isochronous Data Path](https://lore.kernel.org/linux-bluetooth/38cb99f2b63dc55763e9e2c8ae4d4cb14afc6770.camel@tlvince.com/)
 - [x] [Systemd suspend-then-hibernate wakes up after 5 minutes](https://community.frame.work/t/resolved-systemd-suspend-then-hibernate-wakes-up-after-5-minutes/39392): fixed in [Linux >=6.8-rc.1](https://github.com/torvalds/linux/commit/3d762e21d56370a43478b55e604b4a83dd85aafc) via [kernel patch](https://lore.kernel.org/linux-kernel/20231106162310.85711-1-mario.limonciello@amd.com/), workaround: `rtc_cmos.use_acpi_alarm=1`
 - [x] power-profiles-daemon does not set EPP: fixed in [v0.20](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/commit/0d3030b6109156a093b73c66aea2ef3118a79650#9f621eb5fd3bcb2fa5c7bd228c9b1ad42edc46c8)
@@ -43,8 +43,9 @@ Everything works of the box as of Linux v6.5 (>=6.8 recommended) with firmware v
 
 ## Enhancements
 
-- [ ] [AMD P-State Preferred Core](https://www.phoronix.com/news/AMD-P-State-Preferred-Core) patches
-- [ ] [Adaptive Backlight Management (ABM)](https://community.frame.work/t/adaptive-backlight-management-abm/41055): kernel param working, userspace toggle pending [kernel patch](https://github.com/torvalds/linux/commit/63d0b87213a0ba241b3fcfba3fe7b0aed0cd1cc5) and [ppd patch](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/merge_requests/137)
+- [x] [AMD P-State Preferred Core](https://www.phoronix.com/search/AMD+P-State+Preferred+Core): added in Linux >=6.9
+- [x] [Adaptive Backlight Management (ABM)](https://community.frame.work/t/adaptive-backlight-management-abm/41055): added in [Linux >=6.9](https://github.com/torvalds/linux/commit/63d0b87213a0ba241b3fcfba3fe7b0aed0cd1cc5) and [ppd >=0.20](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/releases/0.20)
+- [ ] [Coreboot support](https://www.phoronix.com/news/Framework-13-AMD-Coreboot-WIP)
 
 ## BIOS
 
