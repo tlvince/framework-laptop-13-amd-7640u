@@ -143,6 +143,19 @@ One `foot` terminal running `powerstat`
 | idle (TLP power saver, low power platform profile) | 99.376% | 3.84      |
 | idle (TLP power saver, balanced platform profile)  | 99.391% | 3.80      |
 
+#### 2024-05-17
+
+- 6.9.0 #1-NixOS
+- GNOME 46.1
+- AX210
+- 40% brightness (~200 nits)
+- ppd 0.21 (with Adaptive Backlight Management)
+
+| State                  | C3%     | Power (W) |
+| ---------------------- | ------- | --------- |
+| idle (ppd power saver) | 99.368% | 3.12      |
+| idle (ppd balanced)    | 99.313% | 3.61      |
+
 ### Video benchmarks
 
 - One `foot` terminal running `powerstat`
@@ -219,10 +232,23 @@ One `foot` terminal running `powerstat`
 - 40% brightness (~200 nits)
 - [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
 
-| State                  | C3%     | Power (W) |
-| ---------------------- | ------- | --------- |
-| idle (ppd power saver) | 75.899% | 5.79      |
-| idle (ppd balanced)    | 80.195% | 6.09      |
+| State                      | C3%     | Power (W) |
+| -------------------------- | ------- | --------- |
+| browsing (ppd power saver) | 75.899% | 5.79      |
+| browsing (ppd balanced)    | 80.195% | 6.09      |
+
+#### 2024-05-17
+
+- 6.9.0 #1-NixOS
+- GNOME 46.1
+- AX210
+- 40% brightness (~200 nits)
+- ppd 0.21 (with Adaptive Backlight Management)
+
+| State                      | C3%     | Power (W) |
+| -------------------------- | ------- | --------- |
+| browsing (ppd power saver) | 89.596% | 5.49      |
+| browsing (ppd balanced)    | 89.436% | 5.98      |
 
 ### Device benchmarks
 
