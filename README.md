@@ -100,9 +100,9 @@ One `foot` terminal running `powerstat`
 
 | State                     | C3%     | Power (W) |
 | ------------------------- | ------- | --------- |
-| idle (kernel: no TLP/ppd) | 92.268% | 3.92      |
-| idle (ppd balanced)       | 85.5%   | 3.86      |
-| idle (ppd power saver)    | 86.521% | 3.67      |
+| [idle (kernel: no TLP/ppd)](data/arch-linux-6.5.9-gnome-45-kernel-idle.txt) | 92.268% | 3.92      |
+| [idle (ppd balanced)](data/arch-linux-6.5.9-gnome-45-ppd-balanced-idle.txt)       | 85.5%   | 3.86      |
+| [idle (ppd power saver)](data/arch-linux-6.5.9-gnome-45-ppd-power-saver-idle.txt)    | 86.521% | 3.67      |
 
 #### 2023-11-12
 
@@ -112,10 +112,10 @@ One `foot` terminal running `powerstat`
 
 | State                     | C3%     | Power (W) |
 | ------------------------- | ------- | --------- |
-| idle (kernel: no TLP/ppd) | 99.586% | 4.27      |
-| idle (ppd balanced)       | 98.32%  | 4.43      |
-| idle (TLP defaults)       | 97.899% | 3.93      |
-| idle (TLP power saver)    | 98.256% | 3.89      |
+| [idle (kernel: no TLP/ppd)](data/nixos-linux-6.6.0-gnome-44-kernel-idle.txt) | 99.586% | 4.27      |
+| [idle (ppd balanced)](data/nixos-linux-6.6.0-gnome-44-ppd-balanced-idle.txt)       | 98.32%  | 4.43      |
+| [idle (TLP defaults)](data/nixos-linux-6.6.0-gnome-44-tlp-default-idle.txt)       | 97.899% | 3.93      |
+| [idle (TLP power saver)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-idle.txt)    | 98.256% | 3.89      |
 
 #### 2023-11-30
 
@@ -126,7 +126,7 @@ One `foot` terminal running `powerstat`
 
 | State                                             | C3%     | Power (W) |
 | ------------------------------------------------- | ------- | --------- |
-| idle (TLP power saver, balanced platform profile) | 99.451% | 3.10      |
+| [idle (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.2-gnome-45-tlp-power-saver-abmlevel3-idle.txt) | 99.451% | 3.10      |
 
 #### 2023-12-29
 
@@ -137,11 +137,11 @@ One `foot` terminal running `powerstat`
 
 | State                                              | C3%     | Power (W) |
 | -------------------------------------------------- | ------- | --------- |
-| idle (ppd balanced)                                | 99.338% | 4.51      |
-| idle (ppd balanced, powertop autotune)             | 99.382% | 4.35      |
-| idle (ppd power saver)                             | 99.368% | 4.32      |
-| idle (TLP power saver, low power platform profile) | 99.376% | 3.84      |
-| idle (TLP power saver, balanced platform profile)  | 99.391% | 3.80      |
+| [idle (ppd balanced)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-idle.txt)                                | 99.338% | 4.51      |
+| [idle (ppd balanced, powertop autotune)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-powertop-autotune-idle.txt)             | 99.382% | 4.35      |
+| [idle (ppd power saver)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-power-saver-idle.txt)                             | 99.368% | 4.32      |
+| [idle (TLP power saver, low power platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-low-power-platform-profile-idle.txt) | 99.376% | 3.84      |
+| [idle (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-balanced-platform-profile-idle.txt)  | 99.391% | 3.80      |
 
 #### 2024-05-17
 
@@ -153,8 +153,8 @@ One `foot` terminal running `powerstat`
 
 | State                  | C3%     | Power (W) |
 | ---------------------- | ------- | --------- |
-| idle (ppd power saver) | 99.368% | 3.12      |
-| idle (ppd balanced)    | 99.313% | 3.61      |
+| [idle (ppd power saver)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-power-saver-idle.txt) | 99.368% | 3.12      |
+| [idle (ppd balanced)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-balanced-idle.txt)    | 99.313% | 3.61      |
 
 ### Video benchmarks
 
@@ -171,12 +171,12 @@ One `foot` terminal running `powerstat`
 
 | State                                              | C3%     | Power (W) |
 | -------------------------------------------------- | ------- | --------- |
-| video (kernel: no TLP/ppd)                         | 85.867% | 10.25     |
-| video (ppd balanced)                               | 86.230% | 10.36     |
-| video (ppd power saver)                            | 85.531% | 10.50     |
-| video (TLP defaults)                               | 86.122% | 10.20     |
-| video (TLP power saver)                            | 84.004% | 8.59      |
-| video (TLP power saver, balanced platform profile) | 84.842% | 8.13      |
+| [video (kernel: no TLP/ppd)](data/nixos-linux-6.6.0-gnome-44-kernel-firefox-vp9-1080p.txt)                         | 85.867% | 10.25     |
+| [video (ppd balanced)](data/nixos-linux-6.6.0-gnome-44-ppd-balanced-firefox-vp9-1080p.txt)                               | 86.230% | 10.36     |
+| [video (ppd power saver)](data/nixos-linux-6.6.0-gnome-44-ppd-power-saver-firefox-vp9-1080p.txt)                            | 85.531% | 10.50     |
+| [video (TLP defaults)](data/nixos-linux-6.6.0-gnome-44-tlp-default-firefox-vp9-1080p.txt)                               | 86.122% | 10.20     |
+| [video (TLP power saver)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-firefox-vp9-1080p.txt)                            | 84.004% | 8.59      |
+| [video (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-no-platform-profile-firefox-vp9-1080p.txt) | 84.842% | 8.13      |
 
 #### 2023-11-30
 
@@ -196,13 +196,13 @@ One `foot` terminal running `powerstat`
 - [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
 - AX210
 
-| State                                              | C3%     | Power (W) |
-| -------------------------------------------------- | ------- | --------- |
-| idle (ppd balanced)                                | 84.705% | 9.35      |
-| idle (ppd balanced, powertop autotune)             | 84.891% | 8.83      |
-| idle (ppd power saver)                             | 83.443% | 8.82      |
-| idle (TLP power saver, low power platform profile) | 83.390% | 8.11      |
-| idle (TLP power saver, balanced platform profile)  | 84.495% | 8.26      |
+| State                                               | C3%     | Power (W) |
+| --------------------------------------------------- | ------- | --------- |
+| [video (ppd balanced)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-firefox-vp9-1080p.txt)                                | 84.705% | 9.35      |
+| [video (ppd balanced, powertop autotune)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-powertop-autotune-firefox-vp9-1080p.txt)             | 84.891% | 8.83      |
+| [video (ppd power saver)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-power-saver-firefox-vp9-1080p.txt)                             | 83.443% | 8.82      |
+| [video (TLP power saver, low power platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-low-power-platform-profile-firefox-vp9-1080p.txt) | 83.390% | 8.11      |
+| [video (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-balanced-platform-profile-firefox-vp9-1080p.txt)  | 84.495% | 8.26      |
 
 ### Browsing benchmarks
 
@@ -234,8 +234,8 @@ One `foot` terminal running `powerstat`
 
 | State                      | C3%     | Power (W) |
 | -------------------------- | ------- | --------- |
-| browsing (ppd power saver) | 75.899% | 5.79      |
-| browsing (ppd balanced)    | 80.195% | 6.09      |
+| [browsing (ppd power saver)](data/nixos-linux-6.7.4-gnome-45-ppd-patched-power-saver-browsing.txt) | 75.899% | 5.79      |
+| [browsing (ppd balanced)](data/nixos-linux-6.7.4-gnome-45-ppd-patched-balanced-browsing.txt)    | 80.195% | 6.09      |
 
 #### 2024-05-17
 
@@ -247,8 +247,8 @@ One `foot` terminal running `powerstat`
 
 | State                      | C3%     | Power (W) |
 | -------------------------- | ------- | --------- |
-| browsing (ppd power saver) | 89.596% | 5.49      |
-| browsing (ppd balanced)    | 89.436% | 5.98      |
+| [browsing (ppd power saver)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-power-saver-browsing.txt) | 89.596% | 5.49      |
+| [browsing (ppd balanced)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-balanced-browsing.txt)    | 89.436% | 5.98      |
 
 ### Device benchmarks
 
