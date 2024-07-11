@@ -35,7 +35,7 @@ Everything works of the box as of Linux v6.5 (>=6.9 recommended) with firmware v
 - [x] power-profiles-daemon does not set EPP: fixed in [v0.20](https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/commit/0d3030b6109156a093b73c66aea2ef3118a79650#9f621eb5fd3bcb2fa5c7bd228c9b1ad42edc46c8)
 - [x] HDMI and DisplayPort expansion cards do not autosuspend: fixed in [systemd v255](https://github.com/systemd/systemd/commit/9023630cb7025650aa4d01ee794b0bb68bfdf2c1) (via [systemd patch](https://github.com/systemd/systemd/pull/30131))
 - [x] [ambient light sensor fails to init](https://bugzilla.kernel.org/show_bug.cgi?id=218223): fixed in [Linux >=6.7](https://github.com/torvalds/linux/commit/b9670ee2e975e1cb6751019d5dc5c193aecd8ba2)
-- [ ] [VP9 HW decoding issue](https://community.frame.work/t/vp9-hw-decoding-issue/41187), [high power use when decoding H264 & vp09 with vaapi (software decoding is more efficient)](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10223) and [Power consumption for HW accelerated video decoding for Radeon iGPUs is simply outrageous](https://gitlab.freedesktop.org/drm/amd/-/issues/3195): workaround: use software video decoding for <=1080p (use `CTRL+H` to toggle at runtime in mpv)
+- [ ] [VP9 HW decoding issue](https://community.frame.work/t/vp9-hw-decoding-issue/41187), [high power use when decoding H264 & vp09 with vaapi (software decoding is more efficient)](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10223) and [Power consumption for HW accelerated video decoding for Radeon iGPUs is simply outrageous](https://gitlab.freedesktop.org/drm/amd/-/issues/3195): [amdgpu patch](https://gitlab.freedesktop.org/drm/amd/-/issues/3195#note_2485525), workaround: use software video decoding for <=1080p (use `CTRL+H` to toggle at runtime in mpv)
 - [x] [Headset microphone not selectable as an input source](https://community.frame.work/t/resolved-headset-mic-on-amd-fw13-running-fedora-39/38847): fixed in Linux >=6.6.8 (via [kernel patch](https://github.com/tiwai/sound/commit/33038efb64f7576bac635164021f5c984d4c755f), [workaround via kernel params](https://github.com/NixOS/nixos-hardware/blob/fa194fc484fd7270ab324bb985593f71102e84d1/framework/13-inch/common/default.nix#L7-L13))
 - [ ] [ucsi_acpi errors](https://community.frame.work/t/tracking-anyone-else-seeing-usbcon-pd-error-spam-in-dmesg-user-request/40072)
 - [x] [USB Power Delivery issues with <60W chargers](https://community.frame.work/t/amd-framework-usb-c-charger-compatibility-issues/39323/36): fixed in [3.03b firmware update](https://community.frame.work/t/framework-13-amd-ryzen-7040-bios-3-03b-beta/46479)
@@ -98,11 +98,11 @@ One `foot` terminal running `powerstat`
   - `gnome-settings-daemon`
 - MT7922
 
-| State                     | C3%     | Power (W) |
-| ------------------------- | ------- | --------- |
-| [idle (kernel: no TLP/ppd)](data/arch-linux-6.5.9-gnome-45-kernel-idle.txt) | 92.268% | 3.92      |
+| State                                                                             | C3%     | Power (W) |
+| --------------------------------------------------------------------------------- | ------- | --------- |
+| [idle (kernel: no TLP/ppd)](data/arch-linux-6.5.9-gnome-45-kernel-idle.txt)       | 92.268% | 3.92      |
 | [idle (ppd balanced)](data/arch-linux-6.5.9-gnome-45-ppd-balanced-idle.txt)       | 85.5%   | 3.86      |
-| [idle (ppd power saver)](data/arch-linux-6.5.9-gnome-45-ppd-power-saver-idle.txt)    | 86.521% | 3.67      |
+| [idle (ppd power saver)](data/arch-linux-6.5.9-gnome-45-ppd-power-saver-idle.txt) | 86.521% | 3.67      |
 
 #### 2023-11-12
 
@@ -110,12 +110,12 @@ One `foot` terminal running `powerstat`
 - GNOME 44.5
 - MT7922
 
-| State                     | C3%     | Power (W) |
-| ------------------------- | ------- | --------- |
-| [idle (kernel: no TLP/ppd)](data/nixos-linux-6.6.0-gnome-44-kernel-idle.txt) | 99.586% | 4.27      |
+| State                                                                              | C3%     | Power (W) |
+| ---------------------------------------------------------------------------------- | ------- | --------- |
+| [idle (kernel: no TLP/ppd)](data/nixos-linux-6.6.0-gnome-44-kernel-idle.txt)       | 99.586% | 4.27      |
 | [idle (ppd balanced)](data/nixos-linux-6.6.0-gnome-44-ppd-balanced-idle.txt)       | 98.32%  | 4.43      |
-| [idle (TLP defaults)](data/nixos-linux-6.6.0-gnome-44-tlp-default-idle.txt)       | 97.899% | 3.93      |
-| [idle (TLP power saver)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-idle.txt)    | 98.256% | 3.89      |
+| [idle (TLP defaults)](data/nixos-linux-6.6.0-gnome-44-tlp-default-idle.txt)        | 97.899% | 3.93      |
+| [idle (TLP power saver)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-idle.txt) | 98.256% | 3.89      |
 
 #### 2023-11-30
 
@@ -124,8 +124,8 @@ One `foot` terminal running `powerstat`
 - `amdgpu.abmlevel=3`
 - MT7922
 
-| State                                             | C3%     | Power (W) |
-| ------------------------------------------------- | ------- | --------- |
+| State                                                                                                                   | C3%     | Power (W) |
+| ----------------------------------------------------------------------------------------------------------------------- | ------- | --------- |
 | [idle (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.2-gnome-45-tlp-power-saver-abmlevel3-idle.txt) | 99.451% | 3.10      |
 
 #### 2023-12-29
@@ -135,13 +135,13 @@ One `foot` terminal running `powerstat`
 - [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
 - AX210
 
-| State                                              | C3%     | Power (W) |
-| -------------------------------------------------- | ------- | --------- |
-| [idle (ppd balanced)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-idle.txt)                                | 99.338% | 4.51      |
-| [idle (ppd balanced, powertop autotune)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-powertop-autotune-idle.txt)             | 99.382% | 4.35      |
-| [idle (ppd power saver)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-power-saver-idle.txt)                             | 99.368% | 4.32      |
+| State                                                                                                                                     | C3%     | Power (W) |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------- |
+| [idle (ppd balanced)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-idle.txt)                                                      | 99.338% | 4.51      |
+| [idle (ppd balanced, powertop autotune)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-powertop-autotune-idle.txt)                 | 99.382% | 4.35      |
+| [idle (ppd power saver)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-power-saver-idle.txt)                                                | 99.368% | 4.32      |
 | [idle (TLP power saver, low power platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-low-power-platform-profile-idle.txt) | 99.376% | 3.84      |
-| [idle (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-balanced-platform-profile-idle.txt)  | 99.391% | 3.80      |
+| [idle (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-balanced-platform-profile-idle.txt)   | 99.391% | 3.80      |
 
 #### 2024-05-17
 
@@ -151,10 +151,10 @@ One `foot` terminal running `powerstat`
 - 40% brightness (~200 nits)
 - ppd 0.21 (with Adaptive Backlight Management)
 
-| State                  | C3%     | Power (W) |
-| ---------------------- | ------- | --------- |
+| State                                                                                     | C3%     | Power (W) |
+| ----------------------------------------------------------------------------------------- | ------- | --------- |
 | [idle (ppd power saver)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-power-saver-idle.txt) | 99.368% | 3.12      |
-| [idle (ppd balanced)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-balanced-idle.txt)    | 99.313% | 3.61      |
+| [idle (ppd balanced)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-balanced-idle.txt)       | 99.313% | 3.61      |
 
 ### Video benchmarks
 
@@ -169,13 +169,13 @@ One `foot` terminal running `powerstat`
 - GNOME 44.5
 - MT7922
 
-| State                                              | C3%     | Power (W) |
-| -------------------------------------------------- | ------- | --------- |
-| [video (kernel: no TLP/ppd)](data/nixos-linux-6.6.0-gnome-44-kernel-firefox-vp9-1080p.txt)                         | 85.867% | 10.25     |
-| [video (ppd balanced)](data/nixos-linux-6.6.0-gnome-44-ppd-balanced-firefox-vp9-1080p.txt)                               | 86.230% | 10.36     |
-| [video (ppd power saver)](data/nixos-linux-6.6.0-gnome-44-ppd-power-saver-firefox-vp9-1080p.txt)                            | 85.531% | 10.50     |
-| [video (TLP defaults)](data/nixos-linux-6.6.0-gnome-44-tlp-default-firefox-vp9-1080p.txt)                               | 86.122% | 10.20     |
-| [video (TLP power saver)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-firefox-vp9-1080p.txt)                            | 84.004% | 8.59      |
+| State                                                                                                                                           | C3%     | Power (W) |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------- |
+| [video (kernel: no TLP/ppd)](data/nixos-linux-6.6.0-gnome-44-kernel-firefox-vp9-1080p.txt)                                                      | 85.867% | 10.25     |
+| [video (ppd balanced)](data/nixos-linux-6.6.0-gnome-44-ppd-balanced-firefox-vp9-1080p.txt)                                                      | 86.230% | 10.36     |
+| [video (ppd power saver)](data/nixos-linux-6.6.0-gnome-44-ppd-power-saver-firefox-vp9-1080p.txt)                                                | 85.531% | 10.50     |
+| [video (TLP defaults)](data/nixos-linux-6.6.0-gnome-44-tlp-default-firefox-vp9-1080p.txt)                                                       | 86.122% | 10.20     |
+| [video (TLP power saver)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-firefox-vp9-1080p.txt)                                                | 84.004% | 8.59      |
 | [video (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.0-gnome-44-tlp-power-saver-no-platform-profile-firefox-vp9-1080p.txt) | 84.842% | 8.13      |
 
 #### 2023-11-30
@@ -196,13 +196,27 @@ One `foot` terminal running `powerstat`
 - [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
 - AX210
 
-| State                                               | C3%     | Power (W) |
-| --------------------------------------------------- | ------- | --------- |
-| [video (ppd balanced)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-firefox-vp9-1080p.txt)                                | 84.705% | 9.35      |
-| [video (ppd balanced, powertop autotune)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-powertop-autotune-firefox-vp9-1080p.txt)             | 84.891% | 8.83      |
-| [video (ppd power saver)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-power-saver-firefox-vp9-1080p.txt)                             | 83.443% | 8.82      |
+| State                                                                                                                                                   | C3%     | Power (W) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------- |
+| [video (ppd balanced)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-firefox-vp9-1080p.txt)                                                      | 84.705% | 9.35      |
+| [video (ppd balanced, powertop autotune)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-balanced-powertop-autotune-firefox-vp9-1080p.txt)                 | 84.891% | 8.83      |
+| [video (ppd power saver)](data/nixos-linux-6.6.8-gnome-45-ppd-patched-power-saver-firefox-vp9-1080p.txt)                                                | 83.443% | 8.82      |
 | [video (TLP power saver, low power platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-low-power-platform-profile-firefox-vp9-1080p.txt) | 83.390% | 8.11      |
-| [video (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-balanced-platform-profile-firefox-vp9-1080p.txt)  | 84.495% | 8.26      |
+| [video (TLP power saver, balanced platform profile)](data/nixos-linux-6.6.8-gnome-45-tlp-power-saver-balanced-platform-profile-firefox-vp9-1080p.txt)   | 84.495% | 8.26      |
+
+#### 2024-07-11
+
+- 6.9.8 #1-NixOS
+- GNOME 46.1
+- ppd 0.21, balanced
+- AX210
+
+| State                                                                                                                                                               | C3%     | Power (W) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------- |
+| [video](data/nixos-linux-6.9.8-gnome-46.1-ppd-0.21-amdgpu-before.txt) (mpv)                                                                                         | 88.199% | 7.43      |
+| [video](data/nixos-linux-6.9.8-gnome-46.1-ppd-0.21-amdgpu-after.txt) ([patched amdgpu](https://gitlab.freedesktop.org/drm/amd/-/issues/3195#note_2485525), mpv)     | 87.410% | 6.72      |
+| [video](data/nixos-linux-6.9.8-gnome-46.1-ppd-0.21-amdgpu-before.txt) (Firefox)                                                                                     | 88.199% | 7-8       |
+| [video](data/nixos-linux-6.9.8-gnome-46.1-ppd-0.21-amdgpu-after.txt) ([patched amdgpu](https://gitlab.freedesktop.org/drm/amd/-/issues/3195#note_2485525), Firefox) | 87.410% | 5         |
 
 ### Browsing benchmarks
 
@@ -232,10 +246,10 @@ One `foot` terminal running `powerstat`
 - 40% brightness (~200 nits)
 - [patched](https://community.frame.work/t/tracking-ppd-v-tlp-for-amd-ryzen-7040/39423/137) power-profiles-daemon (multiple drivers)
 
-| State                      | C3%     | Power (W) |
-| -------------------------- | ------- | --------- |
+| State                                                                                              | C3%     | Power (W) |
+| -------------------------------------------------------------------------------------------------- | ------- | --------- |
 | [browsing (ppd power saver)](data/nixos-linux-6.7.4-gnome-45-ppd-patched-power-saver-browsing.txt) | 75.899% | 5.79      |
-| [browsing (ppd balanced)](data/nixos-linux-6.7.4-gnome-45-ppd-patched-balanced-browsing.txt)    | 80.195% | 6.09      |
+| [browsing (ppd balanced)](data/nixos-linux-6.7.4-gnome-45-ppd-patched-balanced-browsing.txt)       | 80.195% | 6.09      |
 
 #### 2024-05-17
 
@@ -245,10 +259,10 @@ One `foot` terminal running `powerstat`
 - 40% brightness (~200 nits)
 - ppd 0.21 (with Adaptive Backlight Management)
 
-| State                      | C3%     | Power (W) |
-| -------------------------- | ------- | --------- |
+| State                                                                                             | C3%     | Power (W) |
+| ------------------------------------------------------------------------------------------------- | ------- | --------- |
 | [browsing (ppd power saver)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-power-saver-browsing.txt) | 89.596% | 5.49      |
-| [browsing (ppd balanced)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-balanced-browsing.txt)    | 89.436% | 5.98      |
+| [browsing (ppd balanced)](data/nixos-linux-6.9.0-gnome-46.1-ppd-0.21-balanced-browsing.txt)       | 89.436% | 5.98      |
 
 ### Device benchmarks
 
