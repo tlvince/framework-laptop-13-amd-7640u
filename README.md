@@ -210,6 +210,8 @@ One `foot` terminal running `powerstat`
 - GNOME 46.1
 - ppd 0.21, balanced
 - AX210
+- mpv fullscreen
+- Firefox (windowed) + terminal evenly split (vertically)
 
 | State                                                                                                                                                               | C3%     | Power (W) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------- |
