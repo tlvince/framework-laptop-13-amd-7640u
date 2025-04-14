@@ -1,5 +1,8 @@
 # Framework Laptop 13 AMD Ryzen 5 7640U
 
+> [!NOTE]
+> Archived: between launch (late 2023) and the time of writing (early 2025), the software issues are mostly resolved and the 2.8k display was released (fixing HiDPI). The Framework AMD 7040 series is a solid Linux machine.
+ 
 Device notes and configuration under Linux for the [Framework Laptop 13 AMD Ryzen 7040 Series](https://frame.work/gb/en/products/laptop-diy-13-gen-amd?tab=overview) Ryzen 5 7640U variant, DIY edition.
 
 Everything works of the box as of Linux v6.5 (>=6.9 recommended) with firmware version 03.03 ([03.05](https://knowledgebase.frame.work/framework-laptop-bios-and-driver-releases-amd-ryzen-7040-series-r1rXGVL16) recommended).
